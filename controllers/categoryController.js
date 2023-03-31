@@ -65,24 +65,26 @@ module.exports = {
   //         next(e);
   //     }
   // },
-  // activate: async (req, res, next) => {
-  //     try {
-
-  //         const reg = await models.Category.update({
-  //             estado: 1
-  //         }, {
-  //             where: {
-  //                 id: req.body.id
-  //             }
-  //         });
-  //         res.status(200).json(reg);
-  //     } catch (e) {
-  //         res.status(500).send({
-  //             message: 'Error -> ' + e
-  //         });
-  //         next(e);
-  //     }
-  // },
+  activate: async (req, res, next) => {
+    try {
+      const reg = await models.Category.update(
+        {
+          state: 1,
+        },
+        {
+          where: {
+            id: req.body.id,
+          },
+        }
+      );
+      res.status(200).json(reg);
+    } catch (e) {
+      res.status(500).send({
+        message: "Error -> " + e,
+      });
+      next(e);
+    }
+  },
   // deactivate: async (req, res, next) => {
   //     try {
   //         const reg = await models.Category.update({

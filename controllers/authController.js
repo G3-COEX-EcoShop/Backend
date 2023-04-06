@@ -7,8 +7,8 @@ const token = require("../services/token");
 module.exports = {
   register: async (req, res, next) => {
     try {
-      const { name, email, password } = req;
-      let user = await models.Usuario.findOne({
+      const { name, email, password } = req.body;
+      let user = await models.User.findOne({
         where: {
           email: req.body.email,
         },
@@ -28,7 +28,7 @@ module.exports = {
       });
 
       res.status(200).json({
-        reg,
+        name: reg.name,
       });
     } catch (e) {
       res.status(500).send({
@@ -39,7 +39,7 @@ module.exports = {
   },
   login: async (req, res, next) => {
     try {
-      let user = await models.Usuario.findOne({
+      let user = await models.User.findOne({
         where: {
           email: req.body.email,
         },

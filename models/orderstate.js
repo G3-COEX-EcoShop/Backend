@@ -21,5 +21,5 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "OrderState",
     }
   );
-  return;
+  return OrderState;
 };

@@ -25,6 +25,16 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+      {
+        name: "Usuario",
+        description: "Sin permisos",
+        p_product: "000000",
+        p_category: "000000",
+        p_orders: "000000",
+        p_reviews: "000000",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
     ]);
   },
 

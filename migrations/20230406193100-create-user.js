@@ -24,6 +24,7 @@ module.exports = {
       },
       rol: {
         type: Sequelize.STRING,
+        defaultValue: "Usuario",
         references: {
           model: "Roles",
           key: "name",
@@ -31,6 +32,7 @@ module.exports = {
       },
       membership: {
         type: Sequelize.BOOLEAN,
+        defaultValue: false,
       },
       createdAt: {
         allowNull: false,

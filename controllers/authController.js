@@ -5,6 +5,38 @@ const models = require("../models");
 const token = require("../services/token");
 
 module.exports = {
+  register: async (req, res, next) => {
+    try {
+      const { name, email, password } = req;
+      let user = await models.Usuario.findOne({
+        where: {
+          email: req.body.email,
+        },
+      });
+
+      if (user) {
+        res.status(409).send({
+          message: "El correo ya tiene una cuenta registrada",
+        });
+        return;
+      }
+
+      const reg = await models.User.create({
+        name,
+        email,
+        password,
+      });
+
+      res.status(200).json({
+        reg,
+      });
+    } catch (e) {
+      res.status(500).send({
+        message: "Error -> " + e,
+      });
+      next(e);
+    }
+  },
   login: async (req, res, next) => {
     try {
       let user = await models.Usuario.findOne({

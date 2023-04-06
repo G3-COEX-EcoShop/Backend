@@ -5,6 +5,7 @@ const authController = require("../controllers/authController");
 const router = routerx();
 
 router.post("/login", authController.login);
+router.post("/register", authController.register);
 
 router.get(
   "/github",

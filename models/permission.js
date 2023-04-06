@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Category extends Model {
+  class Permission extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,14 +13,17 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Category.init({
+  Permission.init({
     name: DataTypes.STRING,
-    description: DataTypes.TEXT,
-    img_url: DataTypes.TEXT,
-    state: DataTypes.BOOLEAN
+    can_manager: DataTypes.BOOLEAN,
+    can_create: DataTypes.BOOLEAN,
+    can_read: DataTypes.BOOLEAN,
+    can_update: DataTypes.BOOLEAN,
+    can_delete: DataTypes.BOOLEAN,
+    can_activate: DataTypes.BOOLEAN
   }, {
     sequelize,
-    modelName: 'Category',
+    modelName: 'Permission',
   });
-  return Category;
+  return Permission;
 };

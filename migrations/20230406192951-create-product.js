@@ -13,14 +13,14 @@ module.exports = {
         type: Sequelize.STRING,
         references: {
           model: "Categories",
-          key: "name",
+          key: "id",
         },
       },
       brand: {
         type: Sequelize.STRING,
         references: {
           model: "Brands",
-          key: "name",
+          key: "id",
         },
       },
       name: {

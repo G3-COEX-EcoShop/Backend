@@ -3,13 +3,13 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable("Permissions", {
-      name: {
-        allowNull: false,
+      id: {
         primaryKey: true,
         type: Sequelize.STRING,
       },
-      id: {
-        type: Sequelize.INTEGER,
+      name: {
+        allowNull: false,
+        type: Sequelize.STRING,
       },
       can_manager: {
         type: Sequelize.BOOLEAN,

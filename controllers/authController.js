@@ -68,15 +68,6 @@ module.exports = {
           });
         }
 
-        const rol = await models.Role.findOne({
-          where: {
-            name: user.rol,
-          },
-        });
-        if (rol) {
-          //user.rol = rol;
-          const permissions = await models.Permission.find;
-        }
         let tokenReturn = await token.encode(
           user.id,
           user.rol,

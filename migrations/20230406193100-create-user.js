@@ -27,7 +27,7 @@ module.exports = {
         defaultValue: "Usuario",
         references: {
           model: "Roles",
-          key: "name",
+          key: "id",
         },
       },
       membership: {

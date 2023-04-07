@@ -16,7 +16,7 @@ module.exports = {
         type: Sequelize.STRING,
         references: {
           model: "OrderStates",
-          key: "name",
+          key: "id",
         },
       },
       discount: {

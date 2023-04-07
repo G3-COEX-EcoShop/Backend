@@ -5,6 +5,7 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     return queryInterface.bulkInsert("Roles", [
       {
+        id: "administrador",
         name: "Administrador",
         description:
           "Puede acceder y modificar todas las funciones y datos del sistema",
@@ -16,6 +17,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
+        id: "vendedor",
         name: "Vendedor",
         description: "Puede ver toda la informacion del sistema",
         p_product: "101000",
@@ -26,6 +28,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
+        id: "usuario",
         name: "Usuario",
         description: "Sin permisos",
         p_product: "000000",

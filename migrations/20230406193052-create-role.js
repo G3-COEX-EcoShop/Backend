@@ -3,12 +3,13 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable("Roles", {
-      name: {
+      id: {
+        allowNull: false,
         primaryKey: true,
         type: Sequelize.STRING,
       },
-      id: {
-        type: Sequelize.INTEGER,
+      name: {
+        type: Sequelize.STRING,
       },
       description: {
         type: Sequelize.TEXT,
@@ -17,28 +18,28 @@ module.exports = {
         type: Sequelize.STRING,
         references: {
           model: "Permissions",
-          key: "name",
+          key: "id",
         },
       },
       p_category: {
         type: Sequelize.STRING,
         references: {
           model: "Permissions",
-          key: "name",
+          key: "id",
         },
       },
       p_orders: {
         type: Sequelize.STRING,
         references: {
           model: "Permissions",
-          key: "name",
+          key: "id",
         },
       },
       p_reviews: {
         type: Sequelize.STRING,
         references: {
           model: "Permissions",
-          key: "name",
+          key: "id",
         },
       },
       createdAt: {

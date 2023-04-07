@@ -5,6 +5,7 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     return queryInterface.bulkInsert("Permissions", [
       {
+        id: "000000",
         name: "000000",
         can_manager: false,
         can_create: false,
@@ -14,6 +15,7 @@ module.exports = {
         can_activate: false,
       },
       {
+        id: "101000",
         name: "101000",
         can_manager: true,
         can_create: false,
@@ -23,6 +25,7 @@ module.exports = {
         can_activate: false,
       },
       {
+        id: "111101",
         name: "111101",
         can_manager: true,
         can_create: true,
@@ -32,6 +35,7 @@ module.exports = {
         can_activate: true,
       },
       {
+        id: "111111",
         name: "111111",
         can_manager: true,
         can_create: true,

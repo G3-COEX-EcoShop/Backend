@@ -19,10 +19,6 @@ module.exports = (sequelize, DataTypes) => {
         as: "reviewsPermission",
         foreignKey: "p_reviews",
       });
-      Role.hasMany(models.User, {
-        foreignKey: "name",
-        targetKey: "rol",
-      });
     }
   }
   Role.init(

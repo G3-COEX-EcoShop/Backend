@@ -23,7 +23,7 @@ module.exports = {
         type: Sequelize.STRING,
         references: {
           model: "Roles",
-          key: "name",
+          key: "id",
         },
       },
       createdAt: {

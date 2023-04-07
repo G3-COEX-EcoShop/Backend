@@ -5,6 +5,7 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     return queryInterface.bulkInsert("Brands", [
       {
+        id: "lg",
         name: "LG",
         description:
           "LG Electronics es una de las mayores empresas de electrónica de consumo del mundo",

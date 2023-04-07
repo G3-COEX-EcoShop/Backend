@@ -25,7 +25,6 @@ async function checkToken(token) {
       },
       process.env.SECRET_KEY_TO_GENERATE_TOKEN,
       {
-        //TODO: SecretKey
         expiresIn: "1d",
       }
     );

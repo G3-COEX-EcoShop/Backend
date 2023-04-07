@@ -8,6 +8,9 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.STRING,
       },
+      id: {
+        type: Sequelize.INTEGER,
+      },
       can_manager: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
@@ -31,6 +34,14 @@ module.exports = {
       can_activate: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
+      },
+      createdAt: {
+        allowNull: true,
+        type: Sequelize.DATE,
+      },
+      updatedAt: {
+        allowNull: true,
+        type: Sequelize.DATE,
       },
     });
   },

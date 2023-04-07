@@ -2,23 +2,26 @@
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Role extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
-      this.belongsTo(models.Permission, {
+      Role.belongsTo(models.Permission, {
+        as: "productPermission",
         foreignKey: "p_product",
       });
-      this.belongsTo(models.Permission, {
+      Role.belongsTo(models.Permission, {
+        as: "categoryPermission",
         foreignKey: "p_category",
       });
-      this.belongsTo(models.Permission, {
+      Role.belongsTo(models.Permission, {
+        as: "ordersPermission",
         foreignKey: "p_orders",
       });
-      this.belongsTo(models.Permission, {
+      Role.belongsTo(models.Permission, {
+        as: "reviewsPermission",
         foreignKey: "p_reviews",
+      });
+      Role.hasMany(models.User, {
+        foreignKey: "name",
+        targetKey: "rol",
       });
     }
   }

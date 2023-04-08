@@ -39,13 +39,10 @@ async function checkToken(token) {
 
 module.exports = {
   //generar el token
-  encode: async (id, rol, nombre, email) => {
+  encode: async (user) => {
     const token = jwt.sign(
       {
-        id: id,
-        rol: rol,
-        nombre: nombre,
-        email: email,
+        user,
       },
       process.env.SECRET_KEY_TO_GENERATE_TOKEN,
       {
@@ -57,13 +54,13 @@ module.exports = {
   //permite decodificar el token
   decode: async (token) => {
     try {
-      const { id } = await jwt.verify(
+      const userInfo = await jwt.verify(
         token,
         process.env.SECRET_KEY_TO_GENERATE_TOKEN
       );
       const user = await models.Usuario.findOne({
         where: {
-          id: id,
+          id: user.id,
         },
       });
       if (user) {

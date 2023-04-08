@@ -3,6 +3,7 @@ require("dotenv").config();
 const bcrypt = require("bcryptjs");
 const models = require("../models");
 const token = require("../services/token");
+const utils = require("./utilsController");
 
 module.exports = {
   register: async (req, res, next) => {
@@ -41,74 +42,58 @@ module.exports = {
   login: async (req, res, next) => {
     const { email, password } = req.body;
     try {
-      let user = await models.User.findOne({
-        where: {
-          email: email,
-        },
-        include: [
-          {
-            model: models.Role,
-            include: [
-              { model: models.Permission, as: "productPermission" },
-              { model: models.Permission, as: "categoryPermission" },
-              { model: models.Permission, as: "ordersPermission" },
-              { model: models.Permission, as: "reviewsPermission" },
-            ],
-          },
-        ],
-      });
-
-      if (user) {
-        let match = await bcrypt.compare(password, user.password);
-
-        if (!match) {
-          res.status(401).send({
-            auth: false,
-            reason: "Invalid Password!",
-          });
-        }
-
-        let tokenReturn = await token.encode(
-          user.id,
-          user.rol,
-          user.nombre,
-          user.email
-        );
-        res.cookie("token", tokenReturn);
-        res.status(200).json({
-          user,
-        });
-      } else {
+      const info = await utils.userByEmail(email);
+      if (!info) {
         res.status(404).send({
           message: "User Not Found.",
         });
+        return;
       }
+
+      let match = await bcrypt.compare(password, info.password);
+      if (!match) {
+        res.status(401).send({
+          auth: false,
+          reason: "Invalid Password!",
+        });
+      }
+
+      const tokenReturn = await token.encode(info.user);
+      res.cookie("token", tokenReturn);
+      res.status(200).json({
+        name: info.user.name,
+      });
     } catch (e) {
       res.status(500).send({
         message: "Error -> " + e,
       });
-      next(e);
     }
   },
 
   github: async (req, res, next) => {
-    const { displayName, id, emails } = req.user;
-    const email = emails[0].values;
     try {
-      let user = await models.Usuario.findOne({
-        where: {
+      const { displayName, id, emails } = req.user;
+      const email = emails[0].value;
+      let info = null;
+      info = await utils.userByEmail(email);
+      if (!info) {
+        const reg = await models.User.create({
+          name: displayName,
           email: email,
-        },
-      });
-    } catch (error) {}
-
-    let tokenReturn = await token.encode(
-      "user.id",
-      "user.rol",
-      displayName,
-      emails[0].values
-    );
-    res.cookie("token", tokenReturn);
+          password: id,
+          github: true,
+        });
+        if (reg) {
+          info = await utils.userByEmail(email);
+        }
+      }
+      if (info) {
+        const tokenReturn = await token.encode(info.user);
+        res.cookie("token", tokenReturn);
+      }
+    } catch (error) {
+      console.log(error);
+    }
     res.redirect(process.env.REDIRECT_AUTH);
   },
 };

@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       password: DataTypes.TEXT,
       rol: DataTypes.STRING,
       membership: DataTypes.BOOLEAN,
+      github: DataTypes.BOOLEAN,
     },
     {
       sequelize,

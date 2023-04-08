@@ -21,6 +21,7 @@ module.exports = {
         include: [
           models.Brand,
           models.Category,
+          models.Review,
           models.ProductCel,
           models.ProductLaptop,
           models.ProductTV,

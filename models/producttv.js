@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       id_product: DataTypes.INTEGER,
       display_technology: DataTypes.STRING,
       resolution: DataTypes.STRING,
-      screen_size: DataTypes.FLOAT,
+      screen_size: DataTypes.STRING,
       hdmi: DataTypes.STRING,
     },
     {

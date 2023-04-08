@@ -16,7 +16,7 @@ module.exports = {
           state: 1,
           Reviews: [
             {
-              description: "Occaecat est deserunt nisi duis irure ex ea.",
+              description: "celular 1",
               point: 5,
               id_user: 1,
             },
@@ -49,7 +49,7 @@ module.exports = {
           state: 0,
           Reviews: [
             {
-              description: "Occaecat est deserunt nisi duis irure ex ea.",
+              description: "celular2",
               point: 5,
               id_user: 1,
             },

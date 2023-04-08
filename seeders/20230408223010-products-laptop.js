@@ -14,6 +14,18 @@ module.exports = {
           stock: 18,
           price: 4000,
           state: 1,
+          Reviews: [
+            {
+              description: "pc 1",
+              point: 5,
+              id_user: 1,
+            },
+            {
+              description: "Cillum voluptate elit aliqua sit ullamco amet.",
+              point: 2,
+              id_user: 1,
+            },
+          ],
           ProductLaptop: {
             cpu_brand: "amd",
             cpu_model: "ryzen5 3600",
@@ -25,6 +37,7 @@ module.exports = {
             resolution: "1920x1080",
           },
         },
+
         {
           category: "computadores",
           brand: "lg",
@@ -34,6 +47,18 @@ module.exports = {
           stock: 6,
           price: 6000,
           state: 1,
+          Reviews: [
+            {
+              description: "pc2",
+              point: 5,
+              id_user: 1,
+            },
+            {
+              description: "Cillum voluptate elit aliqua sit ullamco amet.",
+              point: 2,
+              id_user: 1,
+            },
+          ],
           ProductLaptop: {
             cpu_brand: "intel",
             cpu_model: "core i7-10700",
@@ -46,11 +71,12 @@ module.exports = {
           },
         },
       ],
-      { include: models.ProductLaptop }
+      { include: [models.ProductLaptop, models.Review] }
     );
   },
 
   async down(queryInterface, Sequelize) {
+    await queryInterface.bulkDelete("Reviews", null, {});
     await queryInterface.bulkDelete("ProductLaptops", null, {});
     await queryInterface.bulkDelete("Products", null, {});
   },

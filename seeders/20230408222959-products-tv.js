@@ -14,6 +14,18 @@ module.exports = {
           stock: 18,
           price: 4000,
           state: 1,
+          Reviews: [
+            {
+              description: "tv1",
+              point: 5,
+              id_user: 1,
+            },
+            {
+              description: "Cillum voluptate elit aliqua sit ullamco amet.",
+              point: 2,
+              id_user: 1,
+            },
+          ],
           ProductTV: {
             display_technology: "LED",
             resolution: "1920x1080",
@@ -30,6 +42,18 @@ module.exports = {
           stock: 6,
           price: 6000,
           state: 1,
+          Reviews: [
+            {
+              description: "tv2",
+              point: 5,
+              id_user: 1,
+            },
+            {
+              description: "Cillum voluptate elit aliqua sit ullamco amet.",
+              point: 2,
+              id_user: 1,
+            },
+          ],
           ProductTV: {
             display_technology: "Pasma",
             resolution: "1920x1080",
@@ -38,11 +62,12 @@ module.exports = {
           },
         },
       ],
-      { include: models.ProductTV }
+      { include: [models.ProductTV, models.Review] }
     );
   },
 
   async down(queryInterface, Sequelize) {
+    await queryInterface.bulkDelete("Reviews", null, {});
     await queryInterface.bulkDelete("ProductTVs", null, {});
     await queryInterface.bulkDelete("Products", null, {});
   },

@@ -14,6 +14,18 @@ module.exports = {
           stock: 18,
           price: 4000,
           state: 1,
+          Reviews: [
+            {
+              description: "Occaecat est deserunt nisi duis irure ex ea.",
+              point: 5,
+              id_user: 1,
+            },
+            {
+              description: "Cillum voluptate elit aliqua sit ullamco amet.",
+              point: 2,
+              id_user: 1,
+            },
+          ],
           ProductCel: {
             operating_system: "android",
             storage: "128gb",
@@ -35,6 +47,18 @@ module.exports = {
           stock: 6,
           price: 6000,
           state: 0,
+          Reviews: [
+            {
+              description: "Occaecat est deserunt nisi duis irure ex ea.",
+              point: 5,
+              id_user: 1,
+            },
+            {
+              description: "Cillum voluptate elit aliqua sit ullamco amet.",
+              point: 2,
+              id_user: 1,
+            },
+          ],
           ProductCel: {
             operating_system: "android",
             storage: "256gb",
@@ -48,12 +72,13 @@ module.exports = {
           },
         },
       ],
-      { include: models.ProductCel }
+      { include: [models.ProductCel, models.Review] }
     );
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.bulkDelete("ProductCel", null, {});
+    await queryInterface.bulkDelete("Reviews", null, {});
+    await queryInterface.bulkDelete("ProductCels", null, {});
     await queryInterface.bulkDelete("Products", null, {});
   },
 };

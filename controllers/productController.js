@@ -12,66 +12,45 @@ module.exports = {
   //     next(e);
   //   }
   // },
-  //   query: async (req, res, next) => {
-  //     try {
-  //       const reg = await models.Product.findOne({
-  //         id: req.query.id,
-  //       }).populate("categoria", {
-  //         nombre: 1,
-  //       });
-  //       if (!reg) {
-  //         res.status(404).send({
-  //           message: "El registro no existe",
-  //         });
-  //       } else {
-  //         res.status(200).json(reg);
-  //       }
-  //     } catch (e) {
-  //       res.status(500).send({
-  //         message: "Ocurrió un error",
-  //       });
-  //       next(e);
-  //     }
-  //   },
-  //   queryCodigo: async (req, res, next) => {
-  //     try {
-  //       const reg = await models.Product.findOne({
-  //         codigo: req.query.codigo,
-  //       }).populate("categoria", {
-  //         nombre: 1,
-  //       });
-  //       if (!reg) {
-  //         res.status(404).send({
-  //           message: "El registro no existe",
-  //         });
-  //       } else {
-  //         res.status(200).json(reg);
-  //       }
-  //     } catch (e) {
-  //       res.status(500).send({
-  //         message: "Ocurrió un error",
-  //       });
-  //       next(e);
-  //     }
-  //   },
-  // list: async (req, res, next) => {
-  //   try {
-  //     const reg = await models.Product.findAll({
-  //       include: [
-  //         {
-  //           model: models.Category,
-  //           as: "category",
-  //         },
-  //       ],
-  //     });
-  //     res.status(200).json(reg);
-  //   } catch (e) {
-  //     res.status(500).send({
-  //       message: "Ocurrió un error",
-  //     });
-  //     next(e);
-  //   }
-  // },
+  query: async (req, res, next) => {
+    try {
+      const reg = await models.Product.findOne({
+        where: {
+          id: req.query.id,
+        },
+        include: [
+          models.Brand,
+          models.Category,
+          models.ProductCel,
+          models.ProductLaptop,
+          models.ProductTV,
+        ],
+      });
+      if (!reg) {
+        res.status(404).send({
+          message: "El registro no existe",
+        });
+      } else {
+        res.status(200).json(reg);
+      }
+    } catch (e) {
+      res.status(500).send({
+        message: "Ocurrió un error",
+      });
+      next(e);
+    }
+  },
+  list: async (req, res, next) => {
+    try {
+      const reg = await models.Product.findAll({});
+      res.status(200).json(reg);
+    } catch (e) {
+      res.status(500).send({
+        message: "Ocurrió un error",
+      });
+      next(e);
+    }
+  },
   // listByCategories: async (req, res, next) => {
   //   try {
   //     let result = [];

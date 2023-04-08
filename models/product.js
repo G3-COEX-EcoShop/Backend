@@ -12,7 +12,17 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "category",
       });
 
+      this.belongsTo(models.Brand, {
+        foreignKey: "brand",
+      });
+
       this.hasOne(models.ProductCel, {
+        foreignKey: "id_product",
+      });
+      this.hasOne(models.ProductLaptop, {
+        foreignKey: "id_product",
+      });
+      this.hasOne(models.ProductTV, {
         foreignKey: "id_product",
       });
     }

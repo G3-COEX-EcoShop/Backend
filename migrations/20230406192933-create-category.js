@@ -20,6 +20,14 @@ module.exports = {
       state: {
         type: Sequelize.BOOLEAN,
       },
+      createdAt: {
+        allowNull: true,
+        type: Sequelize.DATE,
+      },
+      updatedAt: {
+        allowNull: true,
+        type: Sequelize.DATE,
+      },
     });
   },
   async down(queryInterface, Sequelize) {

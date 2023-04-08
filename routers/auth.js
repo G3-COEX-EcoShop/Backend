@@ -1,10 +1,10 @@
 const routerx = require("express-promise-router");
 const passport = require("passport");
 const authController = require("../controllers/authController");
-const authMiddleware = require("../middlewares/authMiddleware");
 
 const router = routerx();
 //Ejmeplo como proteger rutas
+//const authMiddleware = require("../middlewares/authMiddleware");
 // router.post(
 //   "/name",
 //   authMiddleware.verifyPermission("category", "create"),

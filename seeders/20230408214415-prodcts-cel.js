@@ -12,6 +12,8 @@ module.exports = {
           description:
             "Dignissimos non ad eos accusantium consequatur dolorem. Ab sit doloribus adipisci cumque sunt nemo atque. Impedit autem ratione consequatur voluptate nihil. Enim voluptatem aliquid repellat. Sint rerum placeat explicabo officiis. Sit sequi et nam aut quia eos.",
           stock: 18,
+          urlImg:
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680119797/EcoShop/Televisor/TV_HYUNDAI_65_PULGADAS_UHD_LED_Plano_SmartTV_lj3igv.jpg",
           price: 4000,
           state: 1,
           Reviews: [
@@ -47,6 +49,8 @@ module.exports = {
           stock: 6,
           price: 6000,
           state: 0,
+          urlImg:
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680119797/EcoShop/Televisor/TV_HYUNDAI_65_PULGADAS_UHD_LED_Plano_SmartTV_lj3igv.jpg",
           Reviews: [
             {
               description: "celular2",

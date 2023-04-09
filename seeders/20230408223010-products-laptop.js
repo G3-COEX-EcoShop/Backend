@@ -14,6 +14,8 @@ module.exports = {
           stock: 18,
           price: 4000,
           state: 1,
+          urlImg:
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680119797/EcoShop/Televisor/TV_HYUNDAI_65_PULGADAS_UHD_LED_Plano_SmartTV_lj3igv.jpg",
           Reviews: [
             {
               description: "pc 1",
@@ -47,6 +49,8 @@ module.exports = {
           stock: 6,
           price: 6000,
           state: 1,
+          urlImg:
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680119797/EcoShop/Televisor/TV_HYUNDAI_65_PULGADAS_UHD_LED_Plano_SmartTV_lj3igv.jpg",
           Reviews: [
             {
               description: "pc2",

@@ -1,30 +1,28 @@
 const models = require("../models");
 
 module.exports = {
-  list: async (req, res, next) => {
-    try {
-      const reg = await models.Category.findAll();
-      res.status(200).json(reg);
-    } catch (e) {
-      res.status(500).send({
-        message: "Error -> " + e,
-      });
-      next(e);
-    }
-  },
-
-  add: async (req, res, next) => {
-    try {
-      const reg = await models.Category.create(req.body);
-      res.status(200).json(reg);
-    } catch (e) {
-      res.status(500).send({
-        message: "Error -> " + e,
-      });
-      next(e);
-    }
-  },
-
+  // list: async (req, res, next) => {
+  //   try {
+  //     const reg = await models.Category.findAll();
+  //     res.status(200).json(reg);
+  //   } catch (e) {
+  //     res.status(500).send({
+  //       message: "Error -> " + e,
+  //     });
+  //     next(e);
+  //   }
+  // },
+  // add: async (req, res, next) => {
+  //   try {
+  //     const reg = await models.Category.create(req.body);
+  //     res.status(200).json(reg);
+  //   } catch (e) {
+  //     res.status(500).send({
+  //       message: "Error -> " + e,
+  //     });
+  //     next(e);
+  //   }
+  // },
   // query: async (req, res, next) => {
   //     try {
   //         const reg = await models.Category.findOne({
@@ -46,7 +44,6 @@ module.exports = {
   //         next(e);
   //     }
   // },
-
   // update: async (req, res, next) => {
   //     try {
   //         const reg = await models.Category.update({
@@ -66,22 +63,24 @@ module.exports = {
   //     }
   // },
   // activate: async (req, res, next) => {
-  //     try {
-
-  //         const reg = await models.Category.update({
-  //             estado: 1
-  //         }, {
-  //             where: {
-  //                 id: req.body.id
-  //             }
-  //         });
-  //         res.status(200).json(reg);
-  //     } catch (e) {
-  //         res.status(500).send({
-  //             message: 'Error -> ' + e
-  //         });
-  //         next(e);
-  //     }
+  //   try {
+  //     const reg = await models.Category.update(
+  //       {
+  //         state: 1,
+  //       },
+  //       {
+  //         where: {
+  //           id: req.body.id,
+  //         },
+  //       }
+  //     );
+  //     res.status(200).json(reg);
+  //   } catch (e) {
+  //     res.status(500).send({
+  //       message: "Error -> " + e,
+  //     });
+  //     next(e);
+  //   }
   // },
   // deactivate: async (req, res, next) => {
   //     try {

@@ -3,6 +3,7 @@ const productController = require("../controllers/productController");
 
 const router = routerx();
 router.get("/list", productController.list);
-router.get("/listCategories", productController.listByCategories);
+router.get("/query", productController.query);
+// router.get("/listCategories", productController.listByCategories);
 
 module.exports = router;

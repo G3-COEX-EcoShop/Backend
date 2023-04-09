@@ -2,51 +2,41 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("Products", {
+    await queryInterface.createTable("PaymentMethods", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      idcategory: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: "Categories",
-          key: "id",
-        },
-        onDelete: "CASCADE",
-        onUpdate: "CASCADE",
-      },
       name: {
         type: Sequelize.STRING,
       },
-      features: {
+      type: {
+        type: Sequelize.STRING,
+      },
+      info: {
         type: Sequelize.TEXT,
       },
-      img_url: {
-        type: Sequelize.TEXT,
-      },
-      description: {
-        type: Sequelize.TEXT,
-      },
-      stock: {
+      id_user: {
         type: Sequelize.INTEGER,
-      },
-      state: {
-        type: Sequelize.INTEGER,
+        references: {
+          model: "Users",
+          key: "id",
+          onDelete: "CASCADE",
+        },
       },
       createdAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE,
       },
       updatedAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE,
       },
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("Products");
+    await queryInterface.dropTable("PaymentMethods");
   },
 };

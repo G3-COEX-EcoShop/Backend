@@ -9,14 +9,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      category: {
+      categoryId: {
         type: Sequelize.STRING,
         references: {
           model: "Categories",
           key: "id",
         },
       },
-      brand: {
+      brandId: {
         type: Sequelize.STRING,
         references: {
           model: "Brands",
@@ -24,6 +24,9 @@ module.exports = {
         },
       },
       name: {
+        type: Sequelize.TEXT,
+      },
+      img_url: {
         type: Sequelize.TEXT,
       },
       description: {
@@ -38,7 +41,7 @@ module.exports = {
       price: {
         type: Sequelize.INTEGER,
       },
-      state: {
+      status: {
         type: Sequelize.BOOLEAN,
       },
       createdAt: {

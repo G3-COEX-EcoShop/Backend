@@ -1,5 +1,5 @@
 Category:
-npx sequelize model:generate --name pedidos --attributes name:string,description:text,url:text,state:integer
+npx sequelize model:generate --name pedidos --attributes name:string,description:text,url:text,status:integer
 
 
 

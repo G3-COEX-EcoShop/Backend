@@ -4,6 +4,21 @@ const models = require("../models");
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
+<<<<<<< HEAD
+    return queryInterface.bulkInsert("Users", [
+      {
+        name: "administrador",
+        email: "admin@gmail.com",
+        password:
+          "$2a$12$81H.pKL0QGK7yKWXIVvwM.m2BpODolqmULzv4BOrGhAJ/z5ohdhBG", //password: 1234
+        rol: "administrador",
+        membership: true,
+        status:null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+    ]);
+=======
     const info = await models.User.bulkCreate(
       [
         {
@@ -82,6 +97,7 @@ module.exports = {
       ],
       { include: [models.Address, models.PaymentMethod] }
     );
+>>>>>>> 30bcc7d3c4fb7e34b1b6cf901319b0473b0663de
   },
 
   async down(queryInterface, Sequelize) {

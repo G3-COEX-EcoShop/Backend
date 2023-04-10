@@ -44,8 +44,8 @@ module.exports = {
     try {
       const info = await utils.userByEmail(email);
       if (!info) {
-        res.status(404).send({
-          message: "User Not Found.",
+        res.status(401).send({
+          message: "Usuario no registrado",
         });
         return;
       }
@@ -53,8 +53,7 @@ module.exports = {
       let match = await bcrypt.compare(password, info.password);
       if (!match) {
         res.status(401).send({
-          auth: false,
-          reason: "Invalid Password!",
+          message: "Credenciales invalidas",
         });
       }
 

@@ -23,16 +23,6 @@ app.use("/api", router);
 
 app.set("port", process.env.PORT || 4000);
 
-require("dotenv").config();
-const config = {
-  username: process.env.MYSQLUSER,
-  password: process.env.MYSQLPASSWORD,
-  database: process.env.MYSQLDATABASE,
-  host: process.env.MYSQLHOST,
-  port: process.env.MYSQLPORT,
-  dialect: "mysql",
-};
-
 if (process.env.NODE_ENV !== "test") {
   app.listen(app.get("port"), () => {
     console.log("Server on port " + app.get("port") + " on dev");

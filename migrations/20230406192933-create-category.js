@@ -21,6 +21,7 @@ module.exports = {
         type: Sequelize.BOOLEAN,
       },
       createdAt: {
+<<<<<<< HEAD
         allowNull: false,
         type: Sequelize.DATE
       },
@@ -28,6 +29,15 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
+=======
+        allowNull: true,
+        type: Sequelize.DATE,
+      },
+      updatedAt: {
+        allowNull: true,
+        type: Sequelize.DATE,
+      },
+>>>>>>> 30bcc7d3c4fb7e34b1b6cf901319b0473b0663de
     });
   },
   async down(queryInterface, Sequelize) {

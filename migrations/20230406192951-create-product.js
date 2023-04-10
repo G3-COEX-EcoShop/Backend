@@ -32,6 +32,9 @@ module.exports = {
       description: {
         type: Sequelize.TEXT,
       },
+      urlImg: {
+        type: Sequelize.TEXT,
+      },
       stock: {
         type: Sequelize.INTEGER,
       },
@@ -42,11 +45,11 @@ module.exports = {
         type: Sequelize.BOOLEAN,
       },
       createdAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE,
       },
       updatedAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE,
       },
     });

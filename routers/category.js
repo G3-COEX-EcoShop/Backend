@@ -3,7 +3,7 @@ const categoryController = require("../controllers/categoryController");
 const authMiddleware = require("../middlewares/authMiddleware");
 
 const router = routerx();
-// router.get("/list", categoryController.list);
+router.get("/list", categoryController.list);
 
 // router.post("/add", authMiddleware.verifyUsuario, categoryController.add);
 

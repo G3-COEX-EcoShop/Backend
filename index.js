@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
@@ -9,7 +11,7 @@ require("./middlewares/authExternal");
 
 const app = express();
 app.use(morgan("dev"));
-app.use(cors());
+app.use(cors({ credentials: true, origin: process.env.URL_FRONTEND }));
 
 app.use(passport.initialize());
 app.use(bodyParser.json());

@@ -2,28 +2,42 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("Brands", {
-      id: {
-        allowNull: false,
-        primaryKey: true,
-        type: Sequelize.STRING,
-      },
-      name: {
-        allowNull: false,
-        type: Sequelize.STRING,
-      },
-      description: {
-        type: Sequelize.TEXT,
-      },
-      img_url: {
-        type: Sequelize.TEXT,
-      },
-      state: {
-        type: Sequelize.BOOLEAN,
-      },
-    });
+    try {
+      await queryInterface.createTable("Brands", {
+        id: {
+          allowNull: false,
+          primaryKey: true,
+          type: Sequelize.STRING,
+        },
+        name: {
+          allowNull: false,
+          type: Sequelize.STRING,
+        },
+        description: {
+          type: Sequelize.TEXT,
+        },
+        img_url: {
+          type: Sequelize.TEXT,
+        },
+        status: {
+          type: Sequelize.BOOLEAN,
+        },
+        createdAt: {
+          type: Sequelize.DATE,
+          allowNull: false,
+          defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+        },
+        updatedAt: {
+          type: Sequelize.DATE,
+          allowNull: false,
+          defaultValue: Sequelize.literal('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'),
+        },
+      });
+    } catch (error) {
+      console.log(error);
+    }
   },
-  async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("Brands");
-  },
+  down: async (queryInterface, Sequelize) => {
+    await queryInterface.dropTable('Brands');
+  }
 };

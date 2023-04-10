@@ -11,6 +11,7 @@ module.exports = {
           "$2a$12$81H.pKL0QGK7yKWXIVvwM.m2BpODolqmULzv4BOrGhAJ/z5ohdhBG", //password: 1234
         rol: "administrador",
         membership: true,
+        status:null,
         createdAt: new Date(),
         updatedAt: new Date(),
       },

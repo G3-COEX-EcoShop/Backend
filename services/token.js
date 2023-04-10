@@ -15,7 +15,7 @@ async function checkToken(token) {
   const user = await models.Usuario.findOne({
     where: {
       id: id,
-      estado: 1,
+      status: 1,
     },
   });
   if (user) {

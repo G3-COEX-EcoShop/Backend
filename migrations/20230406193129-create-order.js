@@ -12,10 +12,10 @@ module.exports = {
       date: {
         type: Sequelize.DATE,
       },
-      order_state: {
+      order_status: {
         type: Sequelize.STRING,
         references: {
-          model: "OrderStates",
+          model: "OrderStatus",
           key: "id",
         },
       },

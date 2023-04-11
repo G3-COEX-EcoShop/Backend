@@ -34,16 +34,14 @@ module.exports = {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
       },
-<<<<<<< HEAD
-      status:{
-        type: Sequelize.STRING,
+      status: {
+        type: Sequelize.BOOLEAN,
         allowNull: true,
-        defaultValue: null 
-=======
+        defaultValue: true,
+      },
       github: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
->>>>>>> 30bcc7d3c4fb7e34b1b6cf901319b0473b0663de
       },
       createdAt: {
         allowNull: true,
@@ -53,7 +51,6 @@ module.exports = {
         allowNull: true,
         type: Sequelize.DATE,
       },
-  
     });
   },
   async down(queryInterface, Sequelize) {

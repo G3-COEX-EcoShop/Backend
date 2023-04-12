@@ -25,6 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       name: DataTypes.STRING,
       description: DataTypes.TEXT,
+      dashboard: DataTypes.BOOLEAN,
       p_product: DataTypes.STRING,
       p_category: DataTypes.STRING,
       p_orders: DataTypes.STRING,

@@ -10,9 +10,7 @@ module.exports = {
         });
         return;
       }
-      res.status(200).json({
-        category,
-      });
+      res.status(200).json(category);
     } catch (e) {
       res.status(400).send({
         message: "Error -> " + e,

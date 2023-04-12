@@ -70,18 +70,7 @@ module.exports = {
 
   list: async (req, res, next) => {
     try {
-      const reg = await models.Product.findAll({
-        include: [
-          {
-            model: models.Category,
-            as: "productCategory",
-          },
-          {
-            model: models.Brand,
-            as: "productBrand",
-          },
-        ],
-      });
+      const reg = await models.Product.findAll({});
       res.status(200).json(reg);
     } catch (e) {
       res.status(500).send({

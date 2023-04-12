@@ -11,7 +11,12 @@ require("./middlewares/authExternal");
 
 const app = express();
 app.use(morgan("dev"));
-app.use(cors({ credentials: true, origin: process.env.URL_FRONTEND }));
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
+);
 
 app.use(passport.initialize());
 app.use(bodyParser.json());

@@ -17,15 +17,15 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(models.PaymentMethod, {
         foreignKey: "id_payment_method",
       });
-      this.belongsTo(models.OrderState, {
-        foreignKey: "order_state",
+      this.belongsTo(models.OrderStatus, {
+        foreignKey: "order_status",
       });
     }
   }
   Order.init(
     {
       date: DataTypes.DATE,
-      order_state: DataTypes.STRING,
+      order_status: DataTypes.STRING,
       discount: DataTypes.INTEGER,
       id_user: DataTypes.INTEGER,
       id_address: DataTypes.INTEGER,

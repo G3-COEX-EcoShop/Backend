@@ -16,7 +16,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        id: "Brand2",
+        id: "unique_brand_id",
         name: "Brand2",
         description: "Description2",
         img_url: "https://example.com/image2.png",
@@ -28,6 +28,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete("brands", null, {});
+    await queryInterface.bulkDelete("Brands", null, {});
   },
 };

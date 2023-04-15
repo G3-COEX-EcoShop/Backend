@@ -8,7 +8,7 @@ module.exports = {
   list: async (req, res, next) => {
     try {
       //   const { name, email, password } = req.body;
-      let user = await models.User.findAll({
+      const user = await models.User.findAll({
       });
       console.log(user);
       if (!user) {
@@ -18,7 +18,7 @@ module.exports = {
 
         return;
       }
-      let newUser = user.map((item) => {
+      const newUser = user.map((item) => {
         item.password = 0
         return item
       })

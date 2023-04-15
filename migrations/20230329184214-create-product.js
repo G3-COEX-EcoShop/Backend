@@ -10,20 +10,18 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       category: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         references: {
           model: "Categories",
           key: "id",
         },
-      },
-      brand: {
-        type: Sequelize.STRING,
-        references: {
-          model: "Brands",
-          key: "id",
-        },
+        onDelete: "CASCADE",
+        onUpdate: "CASCADE",
       },
       name: {
+        type: Sequelize.STRING,
+      },
+      features: {
         type: Sequelize.TEXT,
       },
       img_url: {
@@ -35,18 +33,15 @@ module.exports = {
       stock: {
         type: Sequelize.INTEGER,
       },
-      price: {
+      status: {
         type: Sequelize.INTEGER,
       },
-      status: {
-        type: Sequelize.BOOLEAN,
-      },
       createdAt: {
-        allowNull: true,
+        allowNull: false,
         type: Sequelize.DATE,
       },
       updatedAt: {
-        allowNull: true,
+        allowNull: false,
         type: Sequelize.DATE,
       },
     });

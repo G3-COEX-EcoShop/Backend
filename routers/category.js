@@ -20,6 +20,7 @@ router.get("/list", categoryController.list);
 
 
     router.get("/list" ,categoryController.list);
+    router.get("/listByCategory" ,categoryController.listByCategory);
     router.get("/query", categoryController.query);
     router.post("/add" ,categoryController.add);
     router.put("/update", categoryController.update);

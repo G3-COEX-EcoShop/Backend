@@ -1,0 +1,39 @@
+<script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io("/soportes");
+
+    let localUser = "";
+    let idSoporte = null;
+    
+    function login(user){
+      this.localUser = user;
+      socket.emit('join server', user)
+    }
+
+    function joinRoom(idSoporte){
+      this.idSoporte = idSoporte;
+      const payload = {
+        room: idSoporte,
+        user: this.localUser
+      }
+      socket.emit('join room', payload);
+    }
+
+    function sendMessage(message){
+      const payload = {
+        content: message,
+        to: this.idSoporte,
+        sender: this.localUser,
+        timestamp: new Date()
+      }
+      socket.emit('send message', payload);
+    }
+
+    function exit(){
+        socket.removeAllListeners();
+    }
+
+    socket.on('new message', (message) => console.log(message))
+    socket.on('new user', user => console.log(user) )
+
+  </script>

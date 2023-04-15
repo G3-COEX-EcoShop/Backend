@@ -23,6 +23,7 @@ module.exports = {
             "$2a$12$81H.pKL0QGK7yKWXIVvwM.m2BpODolqmULzv4BOrGhAJ/z5ohdhBG", //password: 1234
           rol: "administrador",
           membership: true,
+          status: true,
           Addresses: [
             {
               name: "Casa",
@@ -60,6 +61,7 @@ module.exports = {
             "$2a$12$81H.pKL0QGK7yKWXIVvwM.m2BpODolqmULzv4BOrGhAJ/z5ohdhBG", //password: 1234
           rol: "usuario",
           membership: false,
+          status: true,
           Addresses: [
             {
               name: "Casa",

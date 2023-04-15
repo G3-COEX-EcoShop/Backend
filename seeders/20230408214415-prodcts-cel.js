@@ -1,5 +1,6 @@
 "use strict";
 const models = require("../models");
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -16,6 +17,18 @@ module.exports = {
             "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680119797/EcoShop/Televisor/TV_HYUNDAI_65_PULGADAS_UHD_LED_Plano_SmartTV_lj3igv.jpg",
           price: 4000,
           status: 1,
+          status: 1,
+          ProductCel: {
+            operating_system: "android",
+            storage: "128gb",
+            ram: "6gb",
+            processor: "Intel Core i9-11900K",
+            screen_size: "6.2 pulgadas",
+            resolution: "1080x2400",
+            main_camera: "12mpx",
+            front_camera: "32mpx",
+            battery: "5000mAh",
+          },
           Reviews: [
             {
               description: "celular 1",
@@ -28,17 +41,6 @@ module.exports = {
               id_user: 1,
             },
           ],
-          ProductCel: {
-            operating_system: "android",
-            storage: "128gb",
-            ram: "6gb",
-            processor: "Intel Core i9-11900K",
-            screen_size: "6.2 pulgadas",
-            resolution: "1080x2400",
-            main_camera: "12mpx",
-            front_camera: "32mpx",
-            battery: "5000mAh",
-          },
         },
         {
           category: "celulares",
@@ -51,6 +53,17 @@ module.exports = {
           status: 0,
           img_url:
             "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680119797/EcoShop/Televisor/TV_HYUNDAI_65_PULGADAS_UHD_LED_Plano_SmartTV_lj3igv.jpg",
+          ProductCel: {
+            operating_system: "android",
+            storage: "256gb",
+            ram: "8gb",
+            processor: "AMD Ryzen 9 5950X",
+            screen_size: "6.5 pulgadas",
+            resolution: "1440x3200",
+            main_camera: "64mpx",
+            front_camera: "16mpx",
+            battery: "6000mAh",
+          },
           Reviews: [
             {
               description: "celular2",
@@ -63,20 +76,11 @@ module.exports = {
               id_user: 1,
             },
           ],
-          ProductCel: {
-            operating_system: "android",
-            storage: "256gb",
-            ram: "8gb",
-            processor: "AMD Ryzen 9 5950X",
-            screen_size: "6.5 pulgadas",
-            resolution: "1440x3200",
-            main_camera: "64mpx",
-            front_camera: "16mpx",
-            battery: "6000mAh",
-          },
         },
       ],
-      { include: [models.ProductCel, models.Review] }
+      {
+        include: [models.ProductCel, models.Review],
+      }
     );
   },
 

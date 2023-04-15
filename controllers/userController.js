@@ -3,13 +3,11 @@ require("dotenv").config();
 const models = require("../models");
 const bcrypt = require("bcryptjs");
 
-
 module.exports = {
   list: async (req, res, next) => {
     try {
       //   const { name, email, password } = req.body;
-      const user = await models.User.findAll({
-      });
+      const user = await models.User.findAll({});
       console.log(user);
       if (!user) {
         res.status(409).send({
@@ -19,11 +17,11 @@ module.exports = {
         return;
       }
       const newUser = user.map((item) => {
-        item.password = 0
-        return item
-      })
+        item.password = 0;
+        return item;
+      });
       res.status(200).json({
-        newUser
+        newUser,
       });
     } catch (e) {
       res.status(400).send({
@@ -34,12 +32,7 @@ module.exports = {
   },
   create: async (req, res, next) => {
     try {
-      const { name,
-        email,
-        password,
-        rol,
-        membership,
-        status } = req.body;
+      const { name, email, password, rol, membership, status } = req.body;
 
       const hashPassword = await bcrypt.hash(password, 12);
 
@@ -49,7 +42,7 @@ module.exports = {
         password: hashPassword,
         rol: rol,
         membership: membership,
-        status:status
+        status: status,
       });
 
       if (!user) {
@@ -59,7 +52,7 @@ module.exports = {
         return;
       }
       res.status(200).json({
-        user
+        user,
       });
     } catch (e) {
       res.status(400).send({
@@ -68,27 +61,33 @@ module.exports = {
       next(e);
     }
   },
-   query: async (req, res, next) => {
-       try {
-           const reg = await models.User.findOne({
-               where: {
-                   id: req.query.id
-               }
-           });
-           if (!reg) {
-               res.status(404).send({
-                   message: 'El usuario no existe'
-               });
-           } else {
-               res.status(200).json(reg);
-           }
-       } catch (e) {
-           res.status(500).send({
-               message: 'Error -> ' + e
-           });
-           next(e);
-       }
-   },
+  query: async (req, res, next) => {
+    try {
+      const reg = await models.User.findOne({
+        where: {
+          id: req.query.id,
+        },
+        include: [
+          models.Review,
+          models.Address,
+          models.PaymentMethod,
+          models.Order,
+        ],
+      });
+      if (!reg) {
+        res.status(404).send({
+          message: "El usuario no existe",
+        });
+      } else {
+        res.status(200).json(reg);
+      }
+    } catch (e) {
+      res.status(500).send({
+        message: "Error -> " + e,
+      });
+      next(e);
+    }
+  },
   update: async (req, res, next) => {
     try {
       const { id } = req.query;
@@ -97,11 +96,13 @@ module.exports = {
       const user = await models.User.findOne({ where: { id } });
 
       if (!user) {
-        return res.status(404).json({ message: 'usuario no encontrados' });
+        return res.status(404).json({ message: "usuario no encontrados" });
       }
 
       if (status !== undefined && status !== user.status) {
-        return res.status(400).json({ message: 'No se puede actualizar el campo de estado' });
+        return res
+          .status(400)
+          .json({ message: "No se puede actualizar el campo de estado" });
       }
 
       await user.update({ name, email }, { where: { id } });
@@ -111,33 +112,33 @@ module.exports = {
       return res.status(200).json(updatedUser);
     } catch (e) {
       res.status(500).send({
-          message: 'Error -> ' + e
+        message: "Error -> " + e,
       });
       next(e);
-  }
+    }
   },
-   activate:async(req, res, next) =>{
+  activate: async (req, res, next) => {
     try {
       const { id } = req.query;
 
       const user = await models.User.findOne({ where: { id } });
 
       if (!user) {
-        return res.status(404).json({ error: 'Usuario no encontrado' });
+        return res.status(404).json({ error: "Usuario no encontrado" });
       }
 
       await user.update({ status: true });
 
-      res.json({ message: 'Usuario activado correctamente' });
+      res.json({ message: "Usuario activado correctamente" });
     } catch (e) {
       res.status(500).send({
-          message: 'Error -> ' + e
+        message: "Error -> " + e,
       });
       next(e);
     }
   },
-  deactivate: async(req, res, next) =>{
-    const { id } = req.query; 
+  deactivate: async (req, res, next) => {
+    const { id } = req.query;
     try {
       const user = await models.User.findOne({ where: { id } });
 
@@ -147,16 +148,18 @@ module.exports = {
 
       await user.update({ status: false });
 
-      return res.status(200).json({ message: "Usuario desactivado correctamente" });
+      return res
+        .status(200)
+        .json({ message: "Usuario desactivado correctamente" });
     } catch (e) {
       res.status(500).send({
-          message: 'Error -> ' + e
+        message: "Error -> " + e,
       });
       next(e);
     }
   },
   remove: async (req, res, next) => {
-    const { id } = req.query; 
+    const { id } = req.query;
     try {
       const userEliminado = await models.User.destroy({
         where: { id },
@@ -167,9 +170,9 @@ module.exports = {
       res.json({ mensaje: "Usuario eliminado exitosamente" });
     } catch (e) {
       res.status(500).send({
-          message: 'Error -> ' + e
+        message: "Error -> " + e,
       });
       next(e);
-  }
-  }, 
-}
+    }
+  },
+};

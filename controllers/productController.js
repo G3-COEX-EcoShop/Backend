@@ -283,25 +283,7 @@ module.exports = {
           models.ProductTV,
         ],
       });
-      console.log(
-        name,
-        brand,
-        category,
-        cpu_brand,
-        cpu_model,
-        graphics_coprocessor,
-        storage,
-        operating_system,
-        screen_size,
-        resolution,
-        ram,
-        processor,
-        main_camera,
-        front_camera,
-        battery,
-        display_technology,
-        hdmi
-      );
+
       if (products.length === 0) {
         return res.status(404).json({
           message: "producto no encontrado",

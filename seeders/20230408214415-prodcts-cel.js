@@ -17,7 +17,6 @@ module.exports = {
             "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680119797/EcoShop/Televisor/TV_HYUNDAI_65_PULGADAS_UHD_LED_Plano_SmartTV_lj3igv.jpg",
           price: 4000,
           status: 1,
-          status: 1,
           ProductCel: {
             operating_system: "android",
             storage: "128gb",

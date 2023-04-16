@@ -40,16 +40,7 @@ module.exports = {
   },
   list: async (req, res, next) => {
     try {
-      const products = await models.Product.findAll({
-        include: [
-          models.Brand,
-          models.Category,
-          models.Review,
-          models.ProductCel,
-          models.ProductLaptop,
-          models.ProductTV,
-        ],
-      });
+      const products = await models.Product.findAll({});
 
       res.status(200).json(products);
     } catch (e) {
@@ -303,27 +294,16 @@ module.exports = {
       next(e);
     }
   },
-  listByCategories: async (req, res, next) => {
+  listByCategory: async (req, res, next) => {
     try {
-      let result = [];
-      const categories = await models.Category.findAll({
-        attributes: ["id", "name", "description", "status"],
+      const { id } = req.query;
+
+      const products = await models.Product.findAll({
+        where: {
+          category: id,
+        },
       });
-      for (const item of categories) {
-        let temp = await models.Product.findAll({
-          where: {
-            category: item.id,
-          },
-        });
-        result.push({
-          name: item.name,
-          categoryId: item.id,
-          description: item.description,
-          status: item.status,
-          product: temp,
-        });
-      }
-      res.status(200).json(result);
+      res.status(200).json(products);
     } catch (e) {
       res.status(400).send({
         message: "Error -> " + e,

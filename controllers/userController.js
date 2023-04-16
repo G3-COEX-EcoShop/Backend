@@ -68,27 +68,32 @@ module.exports = {
       next(e);
     }
   },
-   query: async (req, res, next) => {
-       try {
-           const reg = await models.User.findOne({
-               where: {
-                   id: req.query.id
-               }
-           });
-           if (!reg) {
-               res.status(404).send({
-                   message: 'El usuario no existe'
-               });
-           } else {
-               res.status(200).json(reg);
-           }
-       } catch (e) {
-           res.status(500).send({
-               message: 'Error -> ' + e
-           });
-           next(e);
-       }
-   },
+  query: async (req, res, next) => {
+    try {
+        const reg = await models.User.findOne({
+            where: {
+                id: req.query.id
+            }
+        });
+
+        if (!reg) {
+            res.status(404).send({
+                message: 'El usuario no existe'
+            });
+        } else {
+            const newUser = {
+                ...reg.toJSON(),
+                password: 0
+            };
+            res.status(200).json(newUser);
+        }
+    } catch (e) {
+        res.status(500).send({
+            message: 'Error -> ' + e
+        });
+        next(e);
+    }
+},
   update: async (req, res, next) => {
     try {
       const { id } = req.query;

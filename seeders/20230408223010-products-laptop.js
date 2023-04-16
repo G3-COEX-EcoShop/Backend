@@ -69,7 +69,7 @@ module.exports = {
             storage: "1tb nvme ssd",
             ram: "16 gb",
             operating_system: "Windows",
-            screen_size: "15pulgadas",
+            screen_size: "42pulgadas",
             resolution: "2560x1440",
           },
         },

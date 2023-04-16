@@ -1,5 +1,4 @@
 require("dotenv").config();
-
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
@@ -13,7 +12,7 @@ const app = express();
 app.use(morgan("dev"));
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: process.env.URL_FRONTEND,
     credentials: true,
   })
 );

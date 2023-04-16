@@ -14,7 +14,12 @@ module.exports = {
           stock: 18,
           price: 4000,
           status: 1,
+<<<<<<< HEAD
           img_url:  "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680119797/EcoShop/Televisor/TV_HYUNDAI_65_PULGADAS_UHD_LED_Plano_SmartTV_lj3igv.jpg",
+=======
+          img_url:
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680119797/EcoShop/Televisor/TV_HYUNDAI_65_PULGADAS_UHD_LED_Plano_SmartTV_lj3igv.jpg",
+>>>>>>> origin/develop
           Reviews: [
             {
               description: "pc 1",

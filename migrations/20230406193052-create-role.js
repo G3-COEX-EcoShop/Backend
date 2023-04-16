@@ -14,6 +14,10 @@ module.exports = {
       description: {
         type: Sequelize.TEXT,
       },
+      dashboard: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+      },
       p_product: {
         type: Sequelize.STRING,
         references: {

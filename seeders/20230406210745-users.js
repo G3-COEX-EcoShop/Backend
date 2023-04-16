@@ -7,6 +7,16 @@ module.exports = {
     const info = await models.User.bulkCreate(
       [
         {
+          name: "test",
+          email: "test@gmail.com",
+          password:
+            "$2a$12$81H.pKL0QGK7yKWXIVvwM.m2BpODolqmULzv4BOrGhAJ/z5ohdhBG", //password: 1234
+          rol: "administrador",
+          membership: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
           name: "administrador",
           email: "admin@gmail.com",
           password:

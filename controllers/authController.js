@@ -61,7 +61,7 @@ module.exports = {
       res.cookie("token", tokenReturn, {
         sameSite: "none",
         secure: true,
-        domain: "frontend-chi-teal.vercel.app",
+        domain: req.hostname,
         path: "/auth",
       });
       res.status(200).json({

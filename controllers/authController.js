@@ -58,7 +58,7 @@ module.exports = {
       }
 
       const tokenReturn = await token.encode(info.user);
-      res.cookie("token", tokenReturn);
+      res.cookie("token", tokenReturn, { sameSite: "none", secure: true });
       res.status(200).json({
         name: info.user.name,
       });
@@ -88,7 +88,7 @@ module.exports = {
       }
       if (info) {
         const tokenReturn = await token.encode(info.user);
-        res.cookie("token", tokenReturn);
+        res.cookie("token", tokenReturn, { sameSite: "none", secure: true });
       }
     } catch (error) {
       console.log(error);

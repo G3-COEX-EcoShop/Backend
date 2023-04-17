@@ -12,7 +12,7 @@ const app = express();
 app.use(morgan("dev"));
 app.use(
   cors({
-    origin: process.env.URL_FRONTEND,
+    origin: [process.env.URL_FRONTEND, "http://localhost:3000"],
     credentials: true,
   })
 );

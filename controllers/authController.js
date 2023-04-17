@@ -57,15 +57,14 @@ module.exports = {
         });
       }
       const tokenReturn = await token.encode(info.user);
-      //console.log(req.hostname);
+      console.log(req.hostname);
       res.cookie("token", tokenReturn, {
         sameSite: "none",
         secure: true,
-        domain: req.hostname,
-        path: "/auth",
       });
       res.status(200).json({
         name: info.user.name,
+        token: tokenReturn,
       });
     } catch (e) {
       res.status(500).send({

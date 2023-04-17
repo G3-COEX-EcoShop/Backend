@@ -17,11 +17,6 @@ app.use(
     credentials: true,
   })
 );
-app.use(
-  cookieParser("secret", {
-    domain: process.env.URL_FRONTEND,
-  })
-);
 
 app.use(passport.initialize());
 app.use(bodyParser.json());

@@ -61,7 +61,7 @@ module.exports = {
       res.cookie("token", tokenReturn, {
         sameSite: "none",
         secure: true,
-        domain: "",
+        domain: "http://localhost:3000",
         path: "/auth",
       });
       res.status(200).json({

@@ -61,6 +61,7 @@ module.exports = {
       res.cookie("token", tokenReturn, {
         sameSite: "none",
         secure: true,
+        domain: process.env.DOMAIN_COOKIE,
       });
       res.status(200).json({
         name: info.user.name,
@@ -92,7 +93,11 @@ module.exports = {
       }
       if (info) {
         const tokenReturn = await token.encode(info.user);
-        res.cookie("token", tokenReturn, { sameSite: "none", secure: true });
+        res.cookie("token", tokenReturn, {
+          sameSite: "none",
+          secure: true,
+          domain: process.env.DOMAIN_COOKIE,
+        });
       }
     } catch (error) {
       console.log(error);

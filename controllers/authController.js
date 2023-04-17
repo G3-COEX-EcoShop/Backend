@@ -61,7 +61,8 @@ module.exports = {
       res.cookie("token", tokenReturn, {
         sameSite: "none",
         secure: true,
-        domain: "localhost",
+        domain: ".localhost",
+        path: "/auth",
       });
       res.status(200).json({
         name: info.user.name,

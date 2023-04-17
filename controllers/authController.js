@@ -59,9 +59,7 @@ module.exports = {
 
       const tokenReturn = await token.encode(info.user);
       res.cookie("token", tokenReturn, {
-        sameSite: "none",
-        secure: true,
-        domain: ".localhost",
+        domain: ".localhost:3000",
       });
       res.status(200).json({
         name: info.user.name,

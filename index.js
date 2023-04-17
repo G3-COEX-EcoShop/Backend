@@ -7,13 +7,19 @@ const path = require("path");
 const passport = require("passport");
 const bodyParser = require("body-parser");
 require("./middlewares/authExternal");
-
+const cookieParser = require("cookie-parser");
 const app = express();
 app.use(morgan("dev"));
+
 app.use(
   cors({
     origin: [process.env.URL_FRONTEND, "http://localhost:3000"],
     credentials: true,
+  })
+);
+app.use(
+  cookieParser("secret", {
+    domain: process.env.URL_FRONTEND,
   })
 );
 

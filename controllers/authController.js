@@ -61,7 +61,7 @@ module.exports = {
       res.cookie("token", tokenReturn, {
         sameSite: "none",
         secure: true,
-        domain: process.env.URL_FRONTEND,
+        domain: ".localhost",
       });
       res.status(200).json({
         name: info.user.name,

@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 const models = require("../models");
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 
 module.exports = {
   list: async (req, res, next) => {

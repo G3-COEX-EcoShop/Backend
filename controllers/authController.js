@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 const models = require("../models");
 const token = require("../services/token");
 const utils = require("./utilsController");

@@ -1,6 +1,8 @@
 {
     "version": 2,
-    "build": "npm run installer", 
+    "scripts": {
+        "build": "npm run installer"
+      }, 
     "builds": [
         {
             "src": "index.js",

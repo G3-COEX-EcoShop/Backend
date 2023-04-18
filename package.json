@@ -10,7 +10,7 @@
     "migrate:seed": "npx sequelize-cli db:seed:all",
     "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npm run migrate && npx sequelize-cli db:seed:all  ",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm install --save mysql2 && npm install"
+    "install": "npm install --save mysql2 && npm install cors cookie-parser jsonwebtoken bcrypt express-promise-router passport passport-github2 sequelize  dotenv"
   },
   "repository": {
     "type": "git",

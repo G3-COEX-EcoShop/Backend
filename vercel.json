@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "buildCommand": "npm run installer", 
     "builds": [
         {
             "buildCommand": "npm run installer", 

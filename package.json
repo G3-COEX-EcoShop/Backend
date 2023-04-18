@@ -10,7 +10,7 @@
     "migrate:seed": "npx sequelize-cli db:seed:all",
     "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npm run migrate && npx sequelize-cli db:seed:all  ",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "npm install --save mysql2 && npm run isntall"
+    "install": "npm install --save mysql2 && npm run install"
   },
   "repository": {
     "type": "git",

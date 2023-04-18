@@ -93,10 +93,10 @@ module.exports = {
       }
       if (info) {
         const tokenReturn = await token.encode(info.user);
+        res.set("authorization", tokenReturn);
         res.cookie("token", tokenReturn, {
           sameSite: "none",
           secure: true,
-          domain: process.env.DOMAIN_COOKIE,
         });
       }
     } catch (error) {

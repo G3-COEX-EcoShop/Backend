@@ -18,6 +18,43 @@ module.exports = {
       next(e);
     }
   },
+  listByCategory: async (req, res, next) => {
+    try {
+      const id = req.query.id;
+      const category = await models.Category.findOne({
+        where: { name: id },
+      });
+      if (!category) {
+        return res.status(404).json({ message: "Categoría no encontrada" });
+      }
+      const products = await models.Product.findAll({
+        where: { Category: category.id },
+      });
+      return res.json({
+        category: {
+          id: category.id,
+          name: category.name,
+          description: category.description,
+          img_url: category.img_url,
+          status: category.status,
+        },
+        products: products.map((product) => ({
+          id: product.id,
+          name: product.name,
+          description: product.description,
+          price: product.price,
+          status: product.status,
+          img_url: product.img_url,
+        })),
+      });
+    } catch (e) {
+      console.log(e);
+      res.status(500).send({
+        message: "Error -> " + e,
+      });
+      next(e);
+    }
+  },
   add: async (req, res, next) => {
     try {
       const { id, name, description, img_url, status } = req.body;

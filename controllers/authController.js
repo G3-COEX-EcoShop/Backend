@@ -61,7 +61,6 @@ module.exports = {
       res.cookie("token", tokenReturn, {
         sameSite: "none",
         secure: true,
-        domain: process.env.DOMAIN_COOKIE,
       });
       res.status(200).json({
         name: info.user.name,

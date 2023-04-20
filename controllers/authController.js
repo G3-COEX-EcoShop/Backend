@@ -61,6 +61,7 @@ module.exports = {
       res.cookie("token", tokenReturn, {
         sameSite: "none",
         secure: true,
+        domain: ".onrender.com",
       });
       res.status(200).json({
         name: info.user.name,

@@ -1,4 +1,5 @@
 const nodemailer = require("nodemailer");
+require("dotenv").config();
 
 function enviarCorreoConfirmacionCompra(
   destinatario,
@@ -13,7 +14,7 @@ function enviarCorreoConfirmacionCompra(
     secure: false,
     auth: {
       user: "miguelcarvajal7.mc@gmail.com",
-      pass: "mavmwgsjatyrridl",
+      pass: process.env.PASSWORD_EMAIL,
     },
   });
 

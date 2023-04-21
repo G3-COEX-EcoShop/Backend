@@ -6,39 +6,7 @@ const models = require("../models");
 
 const utils = require("../controllers/utilsController");
 
-// async function checkToken(token) {
-//   let id = null;
-//   try {
-//     const { id } = await jwt.decode(token);
-//     id = id;
-//   } catch (e) {
-//     return false;
-//   }
 
-//   const user = await models.Usuario.findOne({
-//     where: {
-//       id: id,
-//       estado: 1,
-//     },
-//   });
-//   if (user) {
-//     const token = jwt.sign(
-//       {
-//         id: id,
-//       },
-//       process.env.SECRET_KEY_TO_GENERATE_TOKEN,
-//       {
-//         expiresIn: "1d",
-//       }
-//     );
-//     return {
-//       token,
-//       rol: user.rol,
-//     };
-//   } else {
-//     return false;
-//   }
-// }
 
 module.exports = {
   //generar el token

@@ -1,3 +1,4 @@
+const passport = require("passport");
 const tokenService = require("../services/token");
 const { parseCookie } = require("../services/cookie");
 
@@ -17,15 +18,15 @@ const methods = {
   activate: "can_activate",
   deactivate: "can_activate",
 };
+
 const getUserRol = async (token) => {
   if (!token) {
     return;
   }
   const infoDecode = await tokenService.decode(token);
-  if (!infoDecode && !infoDecode.Role) {
+  if (!infoDecode || !infoDecode.Role) {
     return;
   }
-
   return infoDecode.Role;
 };
 
@@ -35,17 +36,20 @@ const verifyPermission = (table, method) => {
 
   return async (req, res, next) => {
     const cookie = parseCookie(req.headers.cookie);
+    console.log(cookie);
     if (!cookie.token) {
       return res.status(403).send({
         message: "No token",
       });
     }
+
     const rol = await getUserRol(cookie.token);
-    if (rol.dataValues[tablePermission].dataValues[methodPermission]) {
+
+    if (rol && rol.dataValues[tablePermission].dataValues[methodPermission]) {
       next();
     } else {
       return res.status(403).send({
-        message: `No esta autorizado a ${table} con accion de ${method}`,
+        message: `No está autorizado para ${tables[table]} con acción de ${methods[method]}`,
       });
     }
   };
@@ -60,7 +64,9 @@ module.exports = {
         message: "No token",
       });
     }
+
     const rol = await getUserRol(cookie.token);
+
     if (rol) {
       next();
     } else {
@@ -69,5 +75,10 @@ module.exports = {
       });
     }
   },
+
   verifyPermission,
+
+  authGitHub: passport.authenticate("auth-github", { session: false }),
+
+  authGoogle: passport.authenticate("auth-google", { session: false }),
 };

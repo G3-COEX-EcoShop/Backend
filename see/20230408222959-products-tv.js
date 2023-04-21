@@ -157,6 +157,7 @@ module.exports = {
             hdmi: "HDMI 2.0",
           },
         },
+
         {
           category: "televisores",
           brand: "Samsung",
@@ -249,6 +250,7 @@ module.exports = {
             hdmi: "2 HDMI",
           },
         },
+
         {
           category: "televisores",
           brand: "Philip",
@@ -403,6 +405,7 @@ module.exports = {
             hdmi: "HDMI 2.0",
           },
         },
+
         {
           category: "televisores",
           brand: "Hyundai",

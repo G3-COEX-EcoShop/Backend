@@ -43,6 +43,10 @@ module.exports = {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
       },
+      google: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+      },
       createdAt: {
         allowNull: true,
         type: Sequelize.DATE,

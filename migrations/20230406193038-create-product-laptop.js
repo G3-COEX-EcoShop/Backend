@@ -9,7 +9,6 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-
       id_product: {
         type: Sequelize.INTEGER,
         unique: true,
@@ -19,6 +18,12 @@ module.exports = {
           key: "id",
           onDelete: "CASCADE",
         },
+      },
+      category: {
+        type: Sequelize.STRING,
+      },
+      brand: {
+        type: Sequelize.STRING,
       },
       cpu_brand: {
         type: Sequelize.STRING,

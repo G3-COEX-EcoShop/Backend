@@ -6,6 +6,7 @@ const token = require("../services/token");
 const utils = require("./utilsController");
 
 module.exports = {
+
   register: async (req, res, next) => {
     try {
       const { name, email, password } = req.body;
@@ -93,6 +94,33 @@ module.exports = {
     } catch (error) {
       console.log(error);
     }
+    res.redirect(process.env.REDIRECT_AUTH);
+  },
+  google: async (req, res, next) => {
+    try {
+      const { displayName, id, emails } = req.user;
+      const email = emails[0].value;
+      let info = null;
+      info = await utils.userByEmail(email);
+      if (!info) {
+        const reg = await models.User.create({
+          name: displayName,
+          email: email,
+          password: id,
+          google: true,
+        });
+        if (reg) {
+          info = await utils.userByEmail(email);
+        }
+      }
+      if (info) {
+        const tokenReturn = await token.encode(info.user);
+        res.cookie("token", tokenReturn);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+
     res.redirect(process.env.REDIRECT_AUTH);
   },
 };

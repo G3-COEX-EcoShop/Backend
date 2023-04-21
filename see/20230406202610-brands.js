@@ -4,6 +4,8 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert("Brands", [
+
+      /*brands computer*/
       {
         id: "hp",
         name: "hp",
@@ -11,17 +13,6 @@ module.exports = {
           "HP (Hewlett-Packard) es una marca global de tecnología que se dedica a desarrollar y fabricar una amplia gama de productos electrónicos, como computadoras personales, impresoras, tablets, servidores y otros dispositivos relacionados. La empresa tiene su sede en Palo Alto, California, y fue fundada en 1939. HP es conocida por su enfoque en la innovación y la calidad de sus productos, y ha establecido una sólida reputación en el mercado de la tecnología. Además de sus productos de hardware, HP también ofrece servicios de software y soluciones empresariales para ayudar a sus clientes a mejorar su productividad y eficiencia.",
         img_url:
           "https://res.cloudinary.com/dlrdlubmf/image/upload/v1681968667/EcoShop/logotipoPc/HP_uchuav.jpg",
-        status: true,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      },
-      {
-        id: "acer",
-        name: "acer",
-        description:
-          "Acer es una marca global de tecnología con sede en Taiwán, que se dedica a la fabricación de una amplia gama de productos electrónicos, como computadoras portátiles, computadoras de escritorio, tabletas, monitores y otros dispositivos relacionados. Fundada en 1976, Acer ha logrado una sólida reputación en el mercado por su enfoque en la innovación y la calidad de sus productos, así como por ofrecer una buena relación calidad-precio. La empresa también se ha comprometido con la sostenibilidad y ha implementado prácticas empresariales responsables en la gestión de sus operaciones y en la fabricación de sus productos. Acer se esfuerza por ofrecer soluciones tecnológicas que sean accesibles para todos y mejoren la vida de las personas en todo el mundo.",
-        img_url:
-          "https://res.cloudinary.com/dlrdlubmf/image/upload/v1681968667/EcoShop/logotipoPc/acer_pvdezq.jpg",
         status: true,
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -38,6 +29,17 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
+        id: "acer",
+        name: "acer",
+        description:
+          "Acer es una marca global de tecnología con sede en Taiwán, que se dedica a la fabricación de una amplia gama de productos electrónicos, como computadoras portátiles, computadoras de escritorio, tabletas, monitores y otros dispositivos relacionados. Fundada en 1976, Acer ha logrado una sólida reputación en el mercado por su enfoque en la innovación y la calidad de sus productos, así como por ofrecer una buena relación calidad-precio. La empresa también se ha comprometido con la sostenibilidad y ha implementado prácticas empresariales responsables en la gestión de sus operaciones y en la fabricación de sus productos. Acer se esfuerza por ofrecer soluciones tecnológicas que sean accesibles para todos y mejoren la vida de las personas en todo el mundo.",
+        img_url:
+          "https://res.cloudinary.com/dlrdlubmf/image/upload/v1681968667/EcoShop/logotipoPc/acer_pvdezq.jpg",
+        status: true,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
         id: "lenovo",
         name: "lenovo",
         description:
@@ -48,6 +50,7 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+
       {
         id: "rog",
         name: "rog",
@@ -129,8 +132,8 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        id: "Hyundai",
-        name: "Hyundai",
+        id: "huyndai",
+        name: "hyundai",
         description:
           "Hyundai es una marca que se dedica a la fabricación de televisores y otros productos electrónicos. La empresa ofrece una amplia gama de televisores de alta definición, incluyendo modelos LED, LCD y OLED, que van desde tamaños pequeños hasta tamaños de pantalla grande. Hyundai se enfoca en ofrecer televisores con una calidad de imagen superior y una gran variedad de características y funciones, como conectividad a internet, capacidad de pantalla dividida, calidad de sonido mejorada y diseño elegante. La marca también se ha comprometido con la sostenibilidad y ha implementado prácticas empresariales responsables en la gestión de sus operaciones y la fabricación de sus productos. En resumen, Hyundai es una marca que ofrece televisores de alta calidad con una gran variedad de características y funciones a precios competitivos, con un enfoque en la calidad, la innovación y la sostenibilidad.",
         img_url:
@@ -162,6 +165,8 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+
+
 
       /*brands cel phone*/
 
@@ -257,7 +262,6 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
-
       {
         id: "realme",
         name: "realme",
@@ -269,7 +273,6 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
-
     ]);
   },
 
@@ -277,3 +280,4 @@ module.exports = {
     await queryInterface.bulkDelete("Brands", null, {});
   },
 };
+

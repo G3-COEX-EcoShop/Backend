@@ -6,37 +6,38 @@ module.exports = {
     return queryInterface.bulkInsert("Categories", [
       {
         id: "computadores",
-        name: "Computadores",
+        name: "computadores",
         description:
-          "Los computadores son dispositivos electrónicos diseñados para procesar, almacenar y comunicar información mediante la manipulación de datos digitales",
-        img_url: "/",
+          "usar una computadora puede ser muy divertido y fácil, y ofrece una amplia gama de actividades y tareas para realizar. Además, gracias a su versatilidad y facilidad de uso, la computadora se ha convertido en una herramienta esencial en la vida cotidiana de muchas personas.",
+        img_url:
+          "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680836148/Portatiles/Computador_Port%C3%A1til_HP_Pavilion_15_lnwq5t.webp",
         status: true,
         createdAt: new Date(),
         updatedAt: new Date(),
-        description:
-          "Los computadores son dispositivos electrónicos diseñados para procesar, almacenar y comunicar información mediante la manipulación de datos digitales",
-        img_url:
-          "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841128/EcoShop/PC%20Y%20PORTATILES/Computador_Port%C3%A1til_LENOVO_14_Pulgadas_IdeaPad_3_okwv1i.jpg",
-        status: true,
       },
       {
         id: "celulares",
-        name: "Celulares",
+        name: "celulares",
         description:
-          "Los celulares, también conocidos como teléfonos móviles, son dispositivos electrónicos portátiles diseñados para realizar llamadas, enviar mensajes y acceder a internet a través de redes móviles mediante la utilización de una variedad de aplicaciones y herramientas digitales.",
+          "usar un celular puede ser muy divertido y fácil, y ofrece una amplia gama de actividades y tareas para realizar en cualquier momento y lugar. Además, gracias a su portabilidad y facilidad de uso, los celulares se han convertido en una herramienta esencial en la vida cotidiana de muchas personas.",
         img_url:
-          "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138117/EcoShop/celulares/iPhone_14_Pro_Max_128_GB_Morado_Oscuro_dp4kee.jpg",
+          "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138147/EcoShop/celulares/ZTE_BLADE_L210_-_32GB_Azul_sbi5oo.jpg",
         status: true,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         id: "televisores",
-        name: "Televisores",
+        name: "televisores",
         description:
-          "Los televisores son dispositivos electrónicos diseñados para recibir señales de televisión y mostrar imágenes y sonidos en la pantalla mediante la conversión de señales analógicas o digitales.",
+          "usar un televisor puede ser muy divertido y fácil, y ofrece una amplia gama de actividades y tareas para disfrutar en la comodidad de tu hogar. Además, gracias a su tamaño y calidad de imagen, el televisor se ha convertido en un elemento esencial en la vida cotidiana de muchas personas.",
         img_url:
-          "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680119784/EcoShop/Televisor/TV_CHALLENGER_65_PULGADAS_UHD_LED_Plano_SmartTV_tmu2jc.jpg",
+          "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680119927/EcoShop/Televisor/TV_XIAOMI_43_PULGADAS_UHD_LED_Plano_SmartTV_aoxq9g.jpg",
         status: true,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
+
     ]);
   },
 

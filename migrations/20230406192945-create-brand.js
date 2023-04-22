@@ -7,11 +7,11 @@ module.exports = {
         id: {
           allowNull: false,
           primaryKey: true,
-          type: Sequelize.STRING,
+          type: Sequelize.STRING
         },
         name: {
           allowNull: false,
-          type: Sequelize.STRING,
+          type: Sequelize.TEXT,
         },
         description: {
           type: Sequelize.TEXT,

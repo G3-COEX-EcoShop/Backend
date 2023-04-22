@@ -29,9 +29,9 @@ module.exports = (sequelize, DataTypes) => {
   Product.init(
     {
       category: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         references: {
-          model: "Categories",
+          model: "Category",
           key: "id",
         },
         allowNull: false,
@@ -61,7 +61,6 @@ module.exports = (sequelize, DataTypes) => {
       status: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
-        defaultValue: true,
       },
     },
     {

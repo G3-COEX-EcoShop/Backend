@@ -29,6 +29,7 @@ module.exports = (sequelize, DataTypes) => {
       membership: DataTypes.BOOLEAN,
       status: DataTypes.BOOLEAN,
       github: DataTypes.BOOLEAN,
+      google: DataTypes.BOOLEAN,
     },
     {
       sequelize,

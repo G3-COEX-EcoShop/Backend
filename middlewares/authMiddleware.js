@@ -1,6 +1,5 @@
 const passport = require("passport");
 const tokenService = require("../services/token");
-const { parseCookie } = require("../services/cookie");
 
 const tables = {
   category: "categoryPermission",
@@ -33,17 +32,18 @@ const getUserRol = async (token) => {
 const verifyPermission = (table, method) => {
   const tablePermission = tables[table];
   const methodPermission = methods[method];
+  console.log("middleware");
 
   return async (req, res, next) => {
-    const cookie = parseCookie(req.headers.cookie);
-    console.log({ cookie });
-    if (!cookie.token) {
+    const token = req.headers.authorization.split(" ")[1];
+    console.log({ token: !!token });
+    if (!token) {
       return res.status(403).send({
         message: "No token",
       });
     }
 
-    const rol = await getUserRol(cookie.token);
+    const rol = await getUserRol(token);
 
     if (rol && rol.dataValues[tablePermission].dataValues[methodPermission]) {
       next();
@@ -57,15 +57,15 @@ const verifyPermission = (table, method) => {
 
 module.exports = {
   verifyUser: async (req, res, next) => {
-    const cookie = parseCookie(req.headers.cookie);
+    const token = req.headers.authorization.split(" ")[1];
 
-    if (!cookie.token) {
+    if (!token) {
       return res.status(403).send({
         message: "No token",
       });
     }
 
-    const rol = await getUserRol(cookie.token);
+    const rol = await getUserRol(token);
 
     if (rol) {
       next();

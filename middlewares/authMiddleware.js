@@ -36,7 +36,7 @@ const verifyPermission = (table, method) => {
 
   return async (req, res, next) => {
     const cookie = parseCookie(req.headers.cookie);
-    console.log(cookie);
+    console.log({ cookie });
     if (!cookie.token) {
       return res.status(403).send({
         message: "No token",

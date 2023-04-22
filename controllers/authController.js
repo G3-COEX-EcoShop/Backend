@@ -57,11 +57,16 @@ module.exports = {
           message: "Credenciales invalidas",
         });
       }
-
       const tokenReturn = await token.encode(info.user);
-      res.cookie("token", tokenReturn);
+      console.log(req.hostname);
+      res.cookie("token", tokenReturn, {
+        sameSite: "none",
+        secure: true,
+        domain: process.env.DOMAIN_COOKIE,
+      });
       res.status(200).json({
         name: info.user.name,
+        token: tokenReturn,
       });
     } catch (e) {
       res.status(500).send({
@@ -89,7 +94,11 @@ module.exports = {
       }
       if (info) {
         const tokenReturn = await token.encode(info.user);
-        res.cookie("token", tokenReturn);
+        res.set("authorization", tokenReturn);
+        res.cookie("token", tokenReturn, {
+          sameSite: "none",
+          secure: true,
+        });
       }
     } catch (error) {
       console.log(error);

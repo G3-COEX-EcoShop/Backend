@@ -15,7 +15,7 @@ module.exports = {
           price: 2049900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680836148/Portatiles/Computador_Port%C3%A1til_HP_Pavilion_15_lnwq5t.webp",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841128/EcoShop/PC%20Y%20PORTATILES/Computador_Port%C3%A1til_HP_Pavilion_15_wbsgyj.webp",
           Reviews: [
             {
               description: "pc1",
@@ -49,7 +49,7 @@ module.exports = {
           price: 1459099,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680835692/Portatiles/Computador_Port%C3%A1til_ASUS_14_Pulgadas_X415JA_vsq5em.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841127/EcoShop/PC%20Y%20PORTATILES/Computador_Port%C3%A1til_ASUS_14_Pulgadas_X415JA_j8z12p.jpg",
           Reviews: [
             {
               description: "pc2",

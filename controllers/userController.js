@@ -32,7 +32,7 @@ module.exports = {
       next(e);
     }
   },
-  create: async (req, res, next) => {
+  add: async (req, res, next) => {
     try {
       const { name,
         email,

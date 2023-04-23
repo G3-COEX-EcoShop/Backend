@@ -19,6 +19,10 @@ module.exports = (sequelize, DataTypes) => {
         as: "reviewsPermission",
         foreignKey: "p_reviews",
       });
+      Role.belongsTo(models.Permission, {
+        as: "userPermission",
+        foreignKey: "p_user",
+      });
     }
   }
   Role.init(

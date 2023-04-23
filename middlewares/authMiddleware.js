@@ -7,16 +7,17 @@ const tables = {
   product: "productPermission",
   order: "ordersPermission",
   review: "reviewsPermission",
+  user: "userPermission",
 };
 
 const methods = {
   manager: "can_manager",
   create: "can_create",
-  read: "can_read",
+  read: "can_read",//leer
   update: "can_update",
   delete: "can_delete",
   activate: "can_activate",
-  deactivate: "can_activate",
+  deactivate: "can_deactivate",
 };
 
 const getUserRol = async (token) => {

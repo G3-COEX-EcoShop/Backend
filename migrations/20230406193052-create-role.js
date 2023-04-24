@@ -46,6 +46,13 @@ module.exports = {
           key: "id",
         },
       },
+      p_user: {
+        type: Sequelize.STRING,
+        references: {
+          model: "Permissions",
+          key: "id",
+        },
+      },
       createdAt: {
         allowNull: true,
         type: Sequelize.DATE,

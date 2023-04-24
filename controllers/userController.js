@@ -10,7 +10,7 @@ module.exports = {
       //   const { name, email, password } = req.body;
       const user = await models.User.findAll({
       });
-      console.log(user);
+      // console.log(user);
       if (!user) {
         res.status(409).send({
           message: "usuario no encontrados",
@@ -39,7 +39,9 @@ module.exports = {
         password,
         rol,
         membership,
-        status } = req.body;
+        status,
+        github,
+        google } = req.body;
 
       const hashPassword = await bcrypt.hash(password, 12);
 
@@ -49,7 +51,9 @@ module.exports = {
         password: hashPassword,
         rol: rol,
         membership: membership,
-        status:status
+        status: status,
+        github: github,
+        google: google
       });
 
       if (!user) {
@@ -58,6 +62,10 @@ module.exports = {
         });
         return;
       }
+
+      // Ocultar password
+      user.password = 0;
+
       res.status(200).json({
         user
       });

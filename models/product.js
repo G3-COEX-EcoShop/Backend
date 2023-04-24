@@ -33,6 +33,7 @@ module.exports = (sequelize, DataTypes) => {
         references: {
           model: "Category",
           key: "id",
+          onDelete: "CASCADE",
         },
         allowNull: false,
       },
@@ -41,6 +42,7 @@ module.exports = (sequelize, DataTypes) => {
         references: {
           model: "Brands",
           key: "id",
+          onDelete: "CASCADE",
         },
         allowNull: false,
       },

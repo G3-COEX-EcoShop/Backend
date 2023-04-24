@@ -5,8 +5,8 @@ module.exports = {
   add: async (req, res, next) => {
     try {
       const {
-        categoryId,
-        brandId,
+        category,
+        brand,
         name,
         img_url,
         description,
@@ -14,14 +14,14 @@ module.exports = {
         price,
         status,
       } = req.body;
-      if (!categoryId || !brandId) {
+      if (!category || !brand) {
         return res
           .status(400)
-          .json({ message: "categoryId and brandId are required fields." });
+          .json({ message: "category and brand are required fields." });
       }
       const newProduct = await models.Product.create({
-        categoryId,
-        brandId,
+        category,
+        brand,
         name,
         img_url,
         description,
@@ -256,20 +256,18 @@ module.exports = {
   remove: async (req, res, next) => {
     const { id } = req.query;
     try {
-      const product = await models.Product.destroy({
-        where: { id },
-      });
+      await models.Review.destroy({ where: { id_product: id } });
+      await models.ProductCel.destroy({ where: { id_product: id } });
+      const product = await models.Product.destroy({ where: { id } });
       if (product === 0) {
-        throw new Error("No se pudo eliminar la categoria");
+        throw new Error("No se pudo eliminar el producto");
       }
-      res.json({ mensaje: "categoria eliminado exitosamente" });
+      res.json({ mensaje: "Producto eliminado exitosamente" });
     } catch (e) {
-      res.status(500).send({
-        message: "Error -> " + e,
-      });
+      res.status(500).send({ message: "Error -> " + e });
       next(e);
     }
-  },
+},
   activate: async (req, res, next) => {
     try {
       const { id } = req.query;

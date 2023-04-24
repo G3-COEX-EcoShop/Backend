@@ -20,7 +20,8 @@ module.exports = (sequelize, DataTypes) => {
     can_read: DataTypes.BOOLEAN,
     can_update: DataTypes.BOOLEAN,
     can_delete: DataTypes.BOOLEAN,
-    can_activate: DataTypes.BOOLEAN
+    can_activate: DataTypes.BOOLEAN,
+    can_deactivate: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'Permission',

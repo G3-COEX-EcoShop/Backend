@@ -57,19 +57,57 @@ module.exports = {
           message: "Credenciales invalidas",
         });
       }
-
       const tokenReturn = await token.encode(info.user);
       res.cookie("token", tokenReturn);
       res.status(200).json({
         name: info.user.name,
+        tokenReturn
       });
+      console.log(tokenReturn);
     } catch (e) {
       res.status(500).send({
         message: "Error -> " + e,
       });
     }
   },
-
+  userInfo: async (req, res, next) => {
+    try {
+      const cookie = req.headers.cookie;
+      if (!cookie) {
+        res.status(401).send({
+          message: "No se ha proporcionado un token de autenticación",
+        });
+        return;
+      }
+      
+      const cookies = require("../services/cookie").parseCookie(cookie);
+      const token = cookies.token;
+      if (!token) {
+        res.status(401).send({
+          message: "No se ha proporcionado un token de autenticación",
+        });
+        return;
+      }
+  
+      const user = await require("../services/token").decode(token);
+      if (!user) {
+        res.status(401).send({
+          message: "Token de autenticación inválido",
+        });
+        return;
+      }
+  
+      res.status(200).json({
+        name: user.name,
+        email: user.email,
+      });
+    } catch (e) {
+      res.status(500).send({
+        message: "Error -> " + e,
+      });
+      next(e);
+    }
+  },
   github: async (req, res, next) => {
     try {
       const { displayName, id, emails } = req.user;

@@ -35,6 +35,18 @@ module.exports = {
       const { name, email, password, rol, membership, status, github, google } =
         req.body;
 
+      let data = await models.User.findOne({
+        where: {
+          email: req.body.email,
+        },
+      });
+
+      if (data) {
+        res.status(409).send({
+          message: "El correo ya tiene una cuenta registrada",
+        });
+        return;
+      }
       const hashPassword = await bcrypt.hash(password, 12);
 
       let user = await models.User.create({

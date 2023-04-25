@@ -313,37 +313,33 @@ module.exports = {
   },
   update: async (req, res, next) => {
     try {
-      const { id } = req.query;
-      const { name, description, stock, price, status } = req.body;
+      const { id } = req.body;
+      console.log({ body: req.body });
 
       const product = await models.Product.findOne({ where: { id } });
-
       if (!product) {
         return res.status(404).json({ message: "producto no encontrados" });
       }
 
-      const allowedFields = ["name", "description", "stock", "price", "status"];
-      const fieldsToUpdate = Object.keys(req.body);
-      const invalidFields = fieldsToUpdate.filter(
-        (field) => !allowedFields.includes(field)
-      );
-      if (invalidFields.length > 0) {
-        return res.status(400).json({
-          message: `No se pueden actualizar los campos ${invalidFields.join(
-            ", "
-          )}`,
-        });
-      }
+      // const allowedFields = ["name", "description", "stock", "price", "status"];
+      // const fieldsToUpdate = Object.keys(req.body);
+      // const invalidFields = fieldsToUpdate.filter(
+      //   (field) => !allowedFields.includes(field)
+      // );
+      // if (invalidFields.length > 0) {
+      //   return res.status(400).json({
+      //     message: `No se pueden actualizar los campos ${invalidFields.join(
+      //       ", "
+      //     )}`,
+      //   });
+      // }
 
-      if (status !== undefined && status !== product.status) {
-        return res
-          .status(400)
-          .json({ message: "No se puede actualizar el campo de estado" });
-      }
-      await product.update(
-        { name, description, stock, price, status },
-        { where: { id } }
-      );
+      // if (status !== undefined && status !== product.status) {
+      //   return res
+      //     .status(400)
+      //     .json({ message: "No se puede actualizar el campo de estado" });
+      // }
+      await product.update({ ...req.body }, { where: { id } });
 
       const updatedProduct = await models.Product.findOne({ where: { id } });
 
@@ -369,7 +365,7 @@ module.exports = {
       res.status(500).send({ message: "Error -> " + e });
       next(e);
     }
-},
+  },
   activate: async (req, res, next) => {
     try {
       const { id } = req.query;

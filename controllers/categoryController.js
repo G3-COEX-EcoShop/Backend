@@ -102,15 +102,20 @@ module.exports = {
       const category = await models.Category.findOne({ where: { id } });
 
       if (!category) {
-        return res.status(404).json({ message: "categoria no encontrados" });
+        return res.status(404).json({ message: "Categoría no encontrada" });
       }
 
+      if (status !== undefined && status === category.status) {
+        return res
+          .status(400)
+          .json({ message: "El campo de estado no puede ser actualizado con el mismo valor" });
+      }
       if (status !== undefined && status !== category.status) {
         return res
           .status(400)
           .json({ message: "No se puede actualizar el campo de estado" });
       }
-      await category.update({ name, description }, { where: { id } });
+      await category.update({ name, description, status }, { where: { id } });
 
       const updatedCategory = await models.Category.findOne({ where: { id } });
 

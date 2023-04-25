@@ -19,24 +19,6 @@ module.exports = {
           onDelete: "CASCADE",
         },
       },
-      category: {
-        type: Sequelize.STRING,
-        allowNull: true,
-        references: {
-          model: "Categories",
-          key: "id",
-          onDelete: "CASCADE",
-        },
-      },
-      brand: {
-        type: Sequelize.STRING,
-        allowNull: true,
-        references: {
-          model: "Brands",
-          key: "id",
-          onDelete: "CASCADE",
-        },
-      },
       display_technology: {
         type: Sequelize.STRING,
       },

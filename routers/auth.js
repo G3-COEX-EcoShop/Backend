@@ -3,16 +3,13 @@ const passport = require("passport");
 const authController = require("../controllers/authController");
 
 const router = routerx();
-//Ejmeplo como proteger rutas
-//const authMiddleware = require("../middlewares/authMiddleware");
-// router.post(
-//   "/name",
-//   authMiddleware.verifyPermission("category", "create"),
-//   authController.login
-// );
 
-router.post("/login", authController.login);
+
+router.get("/login", authController.login);
+
 router.post("/register", authController.register);
+
+router.get("/userInfo", authController.userInfo);
 
 router.get("/github",
   passport.authenticate("auth-github", {session: false,})

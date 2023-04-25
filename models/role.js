@@ -19,6 +19,10 @@ module.exports = (sequelize, DataTypes) => {
         as: "reviewsPermission",
         foreignKey: "p_reviews",
       });
+      Role.belongsTo(models.Permission, {
+        as: "userPermission",
+        foreignKey: "p_user",
+      });
     }
   }
   Role.init(
@@ -30,6 +34,7 @@ module.exports = (sequelize, DataTypes) => {
       p_category: DataTypes.STRING,
       p_orders: DataTypes.STRING,
       p_reviews: DataTypes.STRING,
+      p_user: DataTypes.STRING,
     },
     {
       sequelize,

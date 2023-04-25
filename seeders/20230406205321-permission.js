@@ -13,6 +13,8 @@ module.exports = {
         can_update: false,
         can_delete: false,
         can_activate: false,
+        can_deactivate:false
+
       },
       {
         id: "101000",
@@ -23,6 +25,8 @@ module.exports = {
         can_update: false,
         can_delete: false,
         can_activate: false,
+        can_deactivate:false
+
       },
       {
         id: "111101",
@@ -33,6 +37,8 @@ module.exports = {
         can_update: true,
         can_delete: false,
         can_activate: true,
+        can_deactivate:true
+
       },
       {
         id: "111111",
@@ -43,6 +49,7 @@ module.exports = {
         can_update: true,
         can_delete: true,
         can_activate: true,
+        can_deactivate:true
       },
     ]);
   },

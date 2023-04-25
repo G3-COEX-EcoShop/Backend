@@ -7,7 +7,6 @@ const path = require("path");
 const passport = require("passport");
 const bodyParser = require("body-parser");
 require("./middlewares/authExternal");
-const cookieParser = require("cookie-parser");
 
 const app = express();
 app.use(morgan("dev"));

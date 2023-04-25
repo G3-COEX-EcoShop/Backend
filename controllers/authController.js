@@ -57,12 +57,6 @@ module.exports = {
         });
       }
       const tokenReturn = await token.encode(info.user);
-      console.log(req.hostname);
-      res.cookie("token", tokenReturn, {
-        sameSite: "none",
-        secure: true,
-        domain: process.env.DOMAIN_COOKIE,
-      });
       res.status(200).json({
         name: info.user.name,
         token: tokenReturn,
@@ -113,6 +107,7 @@ module.exports = {
     }
   },
   github: async (req, res, next) => {
+    let tokenReturn = "";
     try {
       const { displayName, id, emails } = req.user;
       const email = emails[0].value;
@@ -130,17 +125,12 @@ module.exports = {
         }
       }
       if (info) {
-        const tokenReturn = await token.encode(info.user);
-        res.set("authorization", tokenReturn);
-        res.cookie("token", tokenReturn, {
-          sameSite: "none",
-          secure: true,
-        });
+        tokenReturn = await token.encode(info.user);
       }
     } catch (error) {
       console.log(error);
     }
-    res.redirect(process.env.REDIRECT_AUTH);
+    res.redirect(process.env.REDIRECT_AUTH + "?t=" + tokenReturn);
   },
   google: async (req, res, next) => {
     try {

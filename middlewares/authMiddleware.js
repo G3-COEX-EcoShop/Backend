@@ -1,6 +1,5 @@
 const passport = require("passport");
 const tokenService = require("../services/token");
-const { parseCookie } = require("../services/cookie");
 
 const tables = {
   category: "categoryPermission",
@@ -34,17 +33,17 @@ const verifyPermission = (table, method) => {
   const tablePermission = tables[table];
   const methodPermission = methods[method];
   return async (req, res, next) => {
-    const cookie = parseCookie(req.headers.cookie);
-    if (!cookie.token) {
-      return res.status(403).send({ message: "No token" });
+    const token = req.headers.authorization.split(" ")[1];
+    console.log({ token: !!token });
+    if (!token) {
+      return res.status(403).send({
+        message: "No token",
+      });
     }
-    const rol = await getUserRol(cookie.token);
-    if (
-      rol &&
-      rol.dataValues[tablePermission] &&
-      rol.dataValues[tablePermission].dataValues[methodPermission] &&
-      rol.dataValues[tablePermission].dataValues[methods.manager]
-    ) {
+
+    const rol = await getUserRol(token);
+
+    if (rol && rol.dataValues[tablePermission].dataValues[methodPermission]) {
       next();
     } else {
       const errorMessage = `No está autorizado para ${tables[table]} con acción de ${methods[method]}`;
@@ -70,11 +69,16 @@ const verifyPermission = (table, method) => {
 
 module.exports = {
   verifyUser: async (req, res, next) => {
-    const cookie = parseCookie(req.headers.cookie);
-    if (!cookie.token) {
-      return res.status(403).send({ message: "No token" });
+    const token = req.headers.authorization.split(" ")[1];
+
+    if (!token) {
+      return res.status(403).send({
+        message: "No token",
+      });
     }
-    const rol = await getUserRol(cookie.token);
+
+    const rol = await getUserRol(token);
+
     if (rol) {
       next();
     } else {

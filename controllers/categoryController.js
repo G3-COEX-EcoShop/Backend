@@ -96,25 +96,19 @@ module.exports = {
   },
   update: async (req, res, next) => {
     try {
-      const { id } = req.query;
-      const { name, description, status } = req.body;
+      const { name, description, status, id } = req.body;
 
       const category = await models.Category.findOne({ where: { id } });
 
       if (!category) {
         return res.status(404).json({ message: "Categoría no encontrada" });
       }
-
-      if (status !== undefined && status === category.status) {
-        return res
-          .status(400)
-          .json({ message: "El campo de estado no puede ser actualizado con el mismo valor" });
-      }
-      if (status !== undefined && status !== category.status) {
-        return res
-          .status(400)
-          .json({ message: "No se puede actualizar el campo de estado" });
-      }
+      //estamos disable for frontend
+      // if (status !== undefined && status !== category.status) {
+      //   return res
+      //     .status(400)
+      //     .json({ message: "No se puede actualizar el campo de estado" });
+      // }
       await category.update({ name, description, status }, { where: { id } });
 
       const updatedCategory = await models.Category.findOne({ where: { id } });

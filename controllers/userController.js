@@ -96,9 +96,10 @@ module.exports = {
     }
   },
   update: async (req, res, next) => {
+    console.log("update user");
     try {
-      const { id } = req.query;
-      const { name, email, status } = req.body;
+      const { name, email, status, rol, id } = req.body;
+      console.log(req.body);
 
       const user = await models.User.findOne({ where: { id } });
 
@@ -106,13 +107,13 @@ module.exports = {
         return res.status(404).json({ message: "usuario no encontrados" });
       }
 
-      if (status !== undefined && status !== user.status) {
-        return res
-          .status(400)
-          .json({ message: "No se puede actualizar el campo de estado" });
-      }
+      // if (status !== undefined && status !== user.status) {
+      //   return res
+      //     .status(400)
+      //     .json({ message: "No se puede actualizar el campo de estado" });
+      // }
 
-      await user.update({ name, email }, { where: { id } });
+      await user.update({ name, email, rol, status }, { where: { id } });
 
       const updatedUser = await models.User.findOne({ where: { id } });
 

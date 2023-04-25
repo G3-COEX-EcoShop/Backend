@@ -33,35 +33,41 @@ const verifyPermission = (table, method) => {
   const tablePermission = tables[table];
   const methodPermission = methods[method];
   return async (req, res, next) => {
-    const token = req.headers.authorization.split(" ")[1];
-    console.log({ token: !!token });
-    if (!token) {
+    try {
+      const token = req.headers.authorization.split(" ")[1];
+
+      if (!token) {
+        return res.status(403).send({
+          message: "No token",
+        });
+      }
+      const rol = await getUserRol(token);
+
+      if (rol && rol.dataValues[tablePermission].dataValues[methodPermission]) {
+        next();
+      } else {
+        const errorMessage = `No está autorizado para ${tables[table]} con acción de ${methods[method]}`;
+        const userDetails = {
+          rol: rol ? rol.dataValues : null,
+          table: table,
+          requiredPermission: {
+            method: method,
+            manager: methods.manager,
+          },
+          userPermission:
+            rol &&
+            rol.dataValues[tablePermission] &&
+            rol.dataValues[tablePermission].dataValues,
+        };
+        return res.status(403).send({
+          message: errorMessage,
+          userDetails: userDetails,
+        });
+      }
+    } catch (error) {
+      console.log(error);
       return res.status(403).send({
         message: "No token",
-      });
-    }
-
-    const rol = await getUserRol(token);
-
-    if (rol && rol.dataValues[tablePermission].dataValues[methodPermission]) {
-      next();
-    } else {
-      const errorMessage = `No está autorizado para ${tables[table]} con acción de ${methods[method]}`;
-      const userDetails = {
-        rol: rol ? rol.dataValues : null,
-        table: table,
-        requiredPermission: {
-          method: method,
-          manager: methods.manager,
-        },
-        userPermission:
-          rol &&
-          rol.dataValues[tablePermission] &&
-          rol.dataValues[tablePermission].dataValues,
-      };
-      return res.status(403).send({
-        message: errorMessage,
-        userDetails: userDetails,
       });
     }
   };

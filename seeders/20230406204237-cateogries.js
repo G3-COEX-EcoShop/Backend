@@ -10,7 +10,7 @@ module.exports = {
         description:
           "usar una computadora puede ser muy divertido y fácil, y ofrece una amplia gama de actividades y tareas para realizar. Además, gracias a su versatilidad y facilidad de uso, la computadora se ha convertido en una herramienta esencial en la vida cotidiana de muchas personas.",
         img_url:
-          "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680836148/Portatiles/Computador_Port%C3%A1til_HP_Pavilion_15_lnwq5t.webp",
+          "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841128/EcoShop/PC%20Y%20PORTATILES/Computador_Port%C3%A1til_VICTUS_Gamer_HP_16.1_Pulgadas_d0510la_zfdugd.jpg",
         status: true,
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -37,7 +37,6 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
-
     ]);
   },
 

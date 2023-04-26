@@ -31,16 +31,18 @@ module.exports = (sequelize, DataTypes) => {
       category: {
         type: DataTypes.STRING,
         references: {
-          model: "Category",
+          model: "Categories",
           key: "id",
+          onUpdate: "CASCADE",
         },
-        allowNull: false,
+        allowNull: true,
       },
       brand: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         references: {
           model: "Brands",
           key: "id",
+          onUpdate: "CASCADE",
         },
         allowNull: false,
       },

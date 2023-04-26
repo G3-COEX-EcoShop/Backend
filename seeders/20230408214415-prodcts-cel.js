@@ -14,7 +14,7 @@ module.exports = {
             "Con el REDMI Note 11 tendrás un rendimiento único y un gran ahorro de batería gracias a sus 6 nm, esto significa que tendrás la posibilidad de utilizarlo sin demora mientras que el equilibrio energético te hará sentir que su energía no tiene fin. Además, su batería de 5000 mAh posee un sistema de carga rápida que permite que lo cargues de 0 a 100% en aprox 58 minutos, sumérgete en una experiencia audiovisual magnifica gracias a su pantalla AMOLED que te ofrece colores vivos y naturales junto con su altavoz doble que te permitirá disfrutar de contenidos con una calidad optima ¡Ven por el tuyo!",
           stock: 10,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680103924/EcoShop/xiaomi_redmi_note_11_color_blanco_naldwy.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138145/EcoShop/celulares/XIAOMI_Redmi_Note_11_4GB_128GB_Azul_Estelar_gn6gdy.jpg",
           price: 800000,
           status: 1,
           Reviews: [
@@ -51,7 +51,7 @@ module.exports = {
           price: 899900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680108644/EcoShop/MOTOROLA_G52_128GB_Blanco_j2pgya.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138137/EcoShop/celulares/MOTOROLA_G52_128GB_Blanco_wkojvu.jpg",
           Reviews: [
             {
               description: "celular2",
@@ -87,7 +87,7 @@ module.exports = {
           price: 659900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680112323/EcoShop/MOTOROLA_G22_128GB_Negro_rde7uf.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138122/EcoShop/celulares/MOTOROLA_G22_128GB_Negro_q7iife.jpg",
           Reviews: [
             {
               description: "celular3",
@@ -123,7 +123,7 @@ module.exports = {
           price: 749900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680114340/EcoShop/XIAOMI_Redmi_10_2022_128GB_Gris_nw7hr2.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138133/EcoShop/celulares/XIAOMI_Redmi_10_2022_128GB_Gris_lhr34k.jpg",
           Reviews: [
             {
               description: "celular4",
@@ -158,7 +158,7 @@ module.exports = {
           price: 2369000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680132314/EcoShop/iPhone_11_64_GB_Blanco_pecexy.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138096/EcoShop/celulares/iPhone_11_64_GB_Blanco_lssizp.jpg",
           Reviews: [
             {
               description: "celular5",
@@ -194,7 +194,7 @@ module.exports = {
           price: 6849000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680132632/EcoShop/iPhone_14_Pro_Max_128_GB_Morado_Oscuro_m5seg0.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138117/EcoShop/celulares/iPhone_14_Pro_Max_128_GB_Morado_Oscuro_dp4kee.jpg",
           Reviews: [
             {
               description: "celular6",
@@ -229,7 +229,7 @@ module.exports = {
           price: 269900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680132915/EcoShop/ALCATEL_1_32GB_Negro_q1oiwa.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138109/EcoShop/celulares/ALCATEL_1_32GB_Negro_qtpyhd.jpg",
           Reviews: [
             {
               description: "celular7",
@@ -264,7 +264,7 @@ module.exports = {
           price: 798000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680133203/EcoShop/ALCATEL_3_2020_-_64GB_Verde_laeg1k.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1682380934/EcoShop/celulares/alcatel3_tgzikw.png",
           Reviews: [
             {
               description: "celular8",
@@ -299,7 +299,7 @@ module.exports = {
           price: 1799900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680133459/EcoShop/HUAWEI_Nova_10_SE_8G_128GB_Negro_tq47cc.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138100/EcoShop/celulares/HUAWEI_Nova_10_SE_8G_128GB_Negro_wyeazd.jpg",
           Reviews: [
             {
               description: "celular9",
@@ -334,7 +334,7 @@ module.exports = {
           price: 785900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680133661/EcoShop/HUAWEI_Y9A_128GB_Rosado_-_Sakura_Pink_mo5qem.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138104/EcoShop/celulares/HUAWEI_Y9A_128GB_Rosado_-_Sakura_Pink_pc00yk.jpg",
           Reviews: [
             {
               description: "celular10",
@@ -370,7 +370,7 @@ module.exports = {
           price: 5999900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680133850/EcoShop/HUAWEI_Mate_50_Pro_256GB_hhyedt.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138108/EcoShop/celulares/HUAWEI_Mate_50_Pro_256GB_pulroe.jpg",
           Reviews: [
             {
               description: "celular11",
@@ -406,7 +406,7 @@ module.exports = {
           price: 873924,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680134720/EcoShop/OPPO_A57_128GB_Negro_c3ixy5.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138132/EcoShop/celulares/OPPO_A57_128GB_Negro_j5jqd6.jpg",
           Reviews: [
             {
               description: "celular12",
@@ -442,7 +442,7 @@ module.exports = {
           price: 1999900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680134890/EcoShop/OPPO_Reno_7_Azul_hr703l.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138132/EcoShop/celulares/OPPO_Reno_7_Azul_bssi1y.jpg",
           Reviews: [
             {
               description: "celular13",
@@ -478,7 +478,7 @@ module.exports = {
           price: 374900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680135371/EcoShop/KALLEY_Silver_Max_Pro_32GB_Verde_xqdc1s.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138123/EcoShop/celulares/KALLEY_Silver_Max_Pro_32GB_Verde_p2gadg.jpg",
           Reviews: [
             {
               description: "celular14",
@@ -514,7 +514,7 @@ module.exports = {
           price: 499900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680135492/EcoShop/MOTOROLA_E22I_64GB_Blanco_rvoyot.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138122/EcoShop/celulares/MOTOROLA_E22I_64GB_Blanco_tattcz.jpg",
           Reviews: [
             {
               description: "celular15",
@@ -550,7 +550,7 @@ module.exports = {
           price: 932.9,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680135622/EcoShop/TECNO_POVA_4_8_256GB_Azul_djnyi5.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138140/EcoShop/celulares/TECNO_POVA_4_8_256GB_Azul_u1brvf.jpg",
           Reviews: [
             {
               description: "celular16",
@@ -586,7 +586,7 @@ module.exports = {
           price: 4209000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680135792/EcoShop/iPhone_13_128GB_Azul_Medianoche_jwsfmo.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138113/EcoShop/celulares/iPhone_13_128GB_Azul_Medianoche_ae75m4.jpg",
           Reviews: [
             {
               description: "celular17",
@@ -622,7 +622,7 @@ module.exports = {
           price: 259900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680136018/EcoShop/ZTE_BLADE_L210_-_32GB_Azul_aeahjw.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138147/EcoShop/celulares/ZTE_BLADE_L210_-_32GB_Azul_sbi5oo.jpg",
           Reviews: [
             {
               description: "celular18",
@@ -658,7 +658,7 @@ module.exports = {
           price: 479.9,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680136257/EcoShop/ZTE_BLADE_A52_64GB_DS_Azul_rd2hn2.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138146/EcoShop/celulares/ZTE_BLADE_A52_64GB_DS_Azul_nwstfw.jpg",
           Reviews: [
             {
               description: "celular19",
@@ -694,7 +694,7 @@ module.exports = {
           price: 699.9,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680136556/EcoShop/REALME_C33_128GB_Azul_avhbwe.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138138/EcoShop/celulares/REALME_C33_128GB_Azul_miqopw.jpg",
           Reviews: [
             {
               description: "celular20",

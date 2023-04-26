@@ -13,13 +13,32 @@ module.exports = {
         stock,
         price,
         status,
+        // Agregar los campos específicos de cada modelo de producto
+        // y cambiar los nombres para que sean únicos
+        operating_system,
+        storage,
+        ram,
+        processor,
+        screen_size,
+        resolution,
+        main_camera,
+        front_camera,
+        battery,
+        display_technology,
+        hdmi,
+        cpu_brand,
+        cpu_model,
+        graphics_coprocessor,
       } = req.body;
+
       if (!category || !brand) {
-        return res
-          .status(400)
-          .json({ message: "category and brand are required fields." });
+        return res.status(400).json({
+          message: "category and brand are required fields.",
+        });
       }
-      const newProduct = await models.Product.create({
+
+      // Crear el producto en la tabla products y guardar el id generado
+      const product = await models.Product.create({
         category,
         brand,
         name,
@@ -29,6 +48,75 @@ module.exports = {
         price,
         status,
       });
+
+      let newProduct = {};
+      let newProductModel;
+      // Validar el modelo de producto específico y crear el producto correspondiente
+      if (category === "celulares") {
+        newProductModel = models.ProductCel;
+        newProduct = await newProductModel.create({
+          operating_system,
+          storage,
+          ram,
+          processor,
+          screen_size,
+          resolution,
+          main_camera,
+          front_camera,
+          battery,
+          id_product: product.id,
+          category,
+          brand,
+          name,
+          img_url,
+          description,
+          stock,
+          price,
+          status,
+        });
+      } else if (category === "televisores") {
+        newProductModel = models.ProductTV;
+        newProduct = await newProductModel.create({
+          display_technology,
+          resolution,
+          screen_size,
+          hdmi,
+          id_product: product.id,
+          category,
+          brand,
+          name,
+          img_url,
+          description,
+          stock,
+          price,
+          status,
+        });
+      } else if (category === "computadores") {
+        newProductModel = models.ProductLaptop;
+        newProduct = await newProductModel.create({
+          cpu_brand,
+          cpu_model,
+          graphics_coprocessor,
+          storage,
+          ram,
+          operating_system,
+          screen_size,
+          resolution,
+          id_product: product.id,
+          category,
+          brand,
+          name,
+          img_url,
+          description,
+          stock,
+          price,
+          status,
+        });
+      } else {
+        return res.status(400).json({
+          message: "Invalid category",
+        });
+      }
 
       res.status(201).json(newProduct);
     } catch (e) {
@@ -319,7 +407,7 @@ module.exports = {
 
       const product = await models.Product.findOne({ where: { id } });
       if (!product) {
-        return res.status(404).json({ message: "producto no encontrados" });
+        return res.status(404).json({ message: "producto no encontrado" });
       }
 
       // const allowedFields = ["name", "description", "stock", "price", "status"];
@@ -352,15 +440,30 @@ module.exports = {
       next(e);
     }
   },
+
   remove: async (req, res, next) => {
     const { id } = req.query;
     try {
+      // Eliminar registros anidados del producto
       await models.Review.destroy({ where: { id_product: id } });
       await models.ProductCel.destroy({ where: { id_product: id } });
-      const product = await models.Product.destroy({ where: { id } });
-      if (product === 0) {
-        throw new Error("No se pudo eliminar el producto");
+      await models.ProductLaptop.destroy({ where: { id_product: id } });
+      await models.ProductTV.destroy({ where: { id_product: id } });
+
+      // Eliminar los registros de OrderProduct relacionados con el producto
+      const orderProducts = await models.OrderProduct.findAll({
+        where: { id_product: id },
+      });
+      if (orderProducts.length > 0) {
+        const orderProductIds = orderProducts.map(
+          (orderProduct) => orderProduct.id
+        );
+        await models.OrderProduct.destroy({ where: { id: orderProductIds } });
       }
+
+      // Eliminar el producto
+      await models.Product.destroy({ where: { id: id } });
+
       res.json({ mensaje: "Producto eliminado exitosamente" });
     } catch (e) {
       res.status(500).send({ message: "Error -> " + e });

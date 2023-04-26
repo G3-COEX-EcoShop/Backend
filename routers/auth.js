@@ -1,6 +1,7 @@
 const routerx = require("express-promise-router");
 const passport = require("passport");
 const authController = require("../controllers/authController");
+const authMiddleware = require("../middlewares/authMiddleware");
 
 const router = routerx();
 
@@ -8,7 +9,11 @@ router.post("/login", authController.login);
 
 router.post("/register", authController.register);
 
-router.get("/userInfo", authController.userInfo);
+router.get(
+  "/userInfo",
+  authMiddleware.verifyPermission("user", "manager"),
+  authController.userInfo
+);
 
 router.get("/github", passport.authenticate("auth-github", { session: false }));
 router.get(

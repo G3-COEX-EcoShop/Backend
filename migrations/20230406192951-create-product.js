@@ -14,6 +14,8 @@ module.exports = {
         references: {
           model: "Categories",
           key: "id",
+          onUpdate: "CASCADE",
+          onDelete: "SET NULL",
         },
       },
       brand: {
@@ -21,6 +23,7 @@ module.exports = {
         references: {
           model: "Brands",
           key: "id",
+          onUpdate: "CASCADE",
         },
       },
       name: {

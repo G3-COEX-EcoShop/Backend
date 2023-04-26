@@ -1,6 +1,6 @@
 const enviarCorreoConfirmacionCompra = require("./sendEmail");
 
-const destinatario = "miguel.inkco@gmail.com";
+const destinatario = "miguelcarvajal7.mc@gmail.com";
 const numeroPedido = "1234";
 const productos = [
   { nombre: "Producto 1", cantidad: 2, precio: 20 },

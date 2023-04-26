@@ -1,6 +1,7 @@
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 
+//confirmacion de compra
 function enviarCorreoConfirmacionCompra(
   destinatario,
   numeroPedido,
@@ -13,13 +14,13 @@ function enviarCorreoConfirmacionCompra(
     port: 587,
     secure: false,
     auth: {
-      user: "miguelcarvajal7.mc@gmail.com",
+      user: "ecoshop.coex@gmail.com",
       pass: process.env.PASSWORD_EMAIL,
     },
   });
 
   const mailOptions = {
-    from: "miguelcarvajal7.mc@gmail.com",
+    from: "ecoshop.coex@gmail.com",
     to: destinatario,
     subject: "Confirmación de compra en tu tienda en línea",
     html: `
@@ -51,5 +52,6 @@ function enviarCorreoConfirmacionCompra(
     }
   });
 }
+
 
 module.exports = enviarCorreoConfirmacionCompra;

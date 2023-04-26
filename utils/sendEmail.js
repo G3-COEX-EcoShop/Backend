@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 
-function enviarCorreoConfirmacionCompra(
+async function enviarCorreoConfirmacionCompra(
   destinatario,
   numeroPedido,
   productos,
@@ -24,7 +24,7 @@ function enviarCorreoConfirmacionCompra(
     subject: "Confirmación de compra en tu tienda en línea",
     html: `
     <h1>¡Gracias por tu compra!</h1>
-    <p>Fecha y hora del pedidi: ${new Date()}</p>
+    <p>Fecha y hora del pedido: ${new Date()}</p>
     
           <p>Tu número de pedido es: <strong>${numeroPedido}</strong></p>
           <p>Detalles de la compra:</p>
@@ -40,16 +40,10 @@ function enviarCorreoConfirmacionCompra(
           <p>El envío será entregado a la siguiente dirección:</p>
           ${direccionEnvio}
           <p>
-         Gracias por comprar en nuestra tienda en línea. ¡Esperamos verte pronto de nuevo!</p>`,
+         Gracias por comprar en nuestra tienda en línea. ¡Esperamos verte pronto!</p>`,
   };
-
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log("Correo electrónico enviado: " + info.response);
-    }
-  });
+  const response = await transporter.sendMail(mailOptions);
+  return response
 }
-
+  
 module.exports = enviarCorreoConfirmacionCompra;

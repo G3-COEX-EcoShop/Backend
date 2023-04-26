@@ -14,7 +14,7 @@ module.exports = {
             "Con el REDMI Note 11 tendrás un rendimiento único y un gran ahorro de batería gracias a sus 6 nm, esto significa que tendrás la posibilidad de utilizarlo sin demora mientras que el equilibrio energético te hará sentir que su energía no tiene fin. Además, su batería de 5000 mAh posee un sistema de carga rápida que permite que lo cargues de 0 a 100% en aprox 58 minutos, sumérgete en una experiencia audiovisual magnifica gracias a su pantalla AMOLED que te ofrece colores vivos y naturales junto con su altavoz doble que te permitirá disfrutar de contenidos con una calidad optima ¡Ven por el tuyo!",
           stock: 10,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680103924/EcoShop/xiaomi_redmi_note_11_color_blanco_naldwy.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138145/EcoShop/celulares/XIAOMI_Redmi_Note_11_4GB_128GB_Azul_Estelar_gn6gdy.jpg",
           price: 800000,
           status: 1,
           Reviews: [
@@ -31,14 +31,14 @@ module.exports = {
           ],
           ProductCel: {
             operating_system: "android",
-            storage: "64GB/128GB",
-            ram: "4GB/6GB",
+            storage: "128GB",
+            ram: "6GB",
             processor: "Snapdragon 680 2.4GHz",
             screen_size: "6.2 pulgadas",
-            resolution: "1080 x 2400 pixels",
+            resolution: "1080 x 2400",
             main_camera: "50mpx",
             front_camera: "20mpx",
-            battery: "4000mAh",
+            battery: "4000 mAh",
           },
         },
         {
@@ -51,7 +51,7 @@ module.exports = {
           price: 899900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680108644/EcoShop/MOTOROLA_G52_128GB_Blanco_j2pgya.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138137/EcoShop/celulares/MOTOROLA_G52_128GB_Blanco_wkojvu.jpg",
           Reviews: [
             {
               description: "celular2",
@@ -70,10 +70,10 @@ module.exports = {
             ram: "4gb",
             processor: "Snapdragon 720 2.4GHz",
             screen_size: "6.5 pulgadas",
-            resolution: "1440x2400 pxl",
+            resolution: "1440x2400",
             main_camera: "64mpx",
             front_camera: "16mpx",
-            battery: "5,000 mAh + TurboPower™ 302",
+            battery: "5,000 mAh",
           },
         },
 
@@ -87,7 +87,7 @@ module.exports = {
           price: 659900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680112323/EcoShop/MOTOROLA_G22_128GB_Negro_rde7uf.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138122/EcoShop/celulares/MOTOROLA_G22_128GB_Negro_q7iife.jpg",
           Reviews: [
             {
               description: "celular3",
@@ -106,10 +106,10 @@ module.exports = {
             ram: "4gb",
             processor: "Snapdragon 720 2.4GHz",
             screen_size: "6.5 pulgadas",
-            resolution: "720x1400 pxl",
+            resolution: "720x1400",
             main_camera: "50mpx",
             front_camera: "16mpx",
-            battery: "5,000 mAh + TurboPower™ 302",
+            battery: "5,000 mAh",
           },
         },
 
@@ -123,7 +123,7 @@ module.exports = {
           price: 749900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680114340/EcoShop/XIAOMI_Redmi_10_2022_128GB_Gris_nw7hr2.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138133/EcoShop/celulares/XIAOMI_Redmi_10_2022_128GB_Gris_lhr34k.jpg",
           Reviews: [
             {
               description: "celular4",
@@ -137,15 +137,15 @@ module.exports = {
             },
           ],
           ProductCel: {
-            operating_system: "android 12",
+            operating_system: "android",
             storage: "128gb",
             ram: "4gb",
             processor: "MediaTek G88 90Hz",
             screen_size: "6.5 pulgadas",
-            resolution: "720x1400 pxl",
+            resolution: "720x1400",
             main_camera: "50mpx",
             front_camera: "16mpx",
-            battery: "5,000 mAh con carga rápida de 18W",
+            battery: "5,000 mAh",
           },
         },
         {
@@ -158,7 +158,7 @@ module.exports = {
           price: 2369000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680132314/EcoShop/iPhone_11_64_GB_Blanco_pecexy.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138096/EcoShop/celulares/iPhone_11_64_GB_Blanco_lssizp.jpg",
           Reviews: [
             {
               description: "celular5",
@@ -175,12 +175,12 @@ module.exports = {
             operating_system: "iOS",
             storage: "64gb",
             ram: "4gb",
-            processor: "iOs 13 ",
+            processor: "iOs 13",
             screen_size: "6.5 pulgadas",
-            resolution: "720x1400 pxl",
-            main_camera: "12  Mpx",
-            front_camera: "12  Mpx",
-            battery: "5,000 mAh con carga rápida de 18W",
+            resolution: "720x1400",
+            main_camera: "12mpx",
+            front_camera: "12mpx",
+            battery: "5,000 mAh",
           },
         },
 
@@ -194,7 +194,7 @@ module.exports = {
           price: 6849000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680132632/EcoShop/iPhone_14_Pro_Max_128_GB_Morado_Oscuro_m5seg0.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138117/EcoShop/celulares/iPhone_14_Pro_Max_128_GB_Morado_Oscuro_dp4kee.jpg",
           Reviews: [
             {
               description: "celular6",
@@ -213,10 +213,10 @@ module.exports = {
             ram: "4gb",
             processor: "iOs 16",
             screen_size: "6.7  Pulgadas",
-            resolution: "2796 x 1290 ",
-            main_camera: "48MP",
-            front_camera: "12  Mpx",
-            battery: "5,100 mAh ",
+            resolution: "2796 x 1290",
+            main_camera: "48mpx",
+            front_camera: "12mpx",
+            battery: "5,100 mAh",
           },
         },
         {
@@ -229,7 +229,7 @@ module.exports = {
           price: 269900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680132915/EcoShop/ALCATEL_1_32GB_Negro_q1oiwa.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138109/EcoShop/celulares/ALCATEL_1_32GB_Negro_qtpyhd.jpg",
           Reviews: [
             {
               description: "celular7",
@@ -248,10 +248,10 @@ module.exports = {
             ram: "1gb",
             processor: "Mediatek",
             screen_size: "5  Pulgadas",
-            resolution: "FWVGA+(480X960)",
-            main_camera: "5MP",
-            front_camera: "2 pxl",
-            battery: "2,000 mAh ",
+            resolution: "480 X 960",
+            main_camera: "5mpx",
+            front_camera: "2mpx",
+            battery: "2,000 mAh",
           },
         },
         {
@@ -264,7 +264,7 @@ module.exports = {
           price: 798000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680133203/EcoShop/ALCATEL_3_2020_-_64GB_Verde_laeg1k.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1682380934/EcoShop/celulares/alcatel3_tgzikw.png",
           Reviews: [
             {
               description: "celular8",
@@ -283,10 +283,10 @@ module.exports = {
             ram: "4gb",
             processor: "android 10",
             screen_size: "6.22  Pulgadas",
-            resolution: "HD+",
-            main_camera: "13MP",
-            front_camera: "5 pxl",
-            battery: "4,000 mAh ",
+            resolution: "HD",
+            main_camera: "13mpx",
+            front_camera: "5mpx",
+            battery: "4,000 mAh",
           },
         },
         {
@@ -299,7 +299,7 @@ module.exports = {
           price: 1799900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680133459/EcoShop/HUAWEI_Nova_10_SE_8G_128GB_Negro_tq47cc.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138100/EcoShop/celulares/HUAWEI_Nova_10_SE_8G_128GB_Negro_wyeazd.jpg",
           Reviews: [
             {
               description: "celular9",
@@ -313,15 +313,15 @@ module.exports = {
             },
           ],
           ProductCel: {
-            operating_system: "EMUI 12 ",
+            operating_system: "EMUI",
             storage: "128gb",
             ram: "8gb",
             processor: "EMUI 12",
             screen_size: "6.67  Pulgadas",
             resolution: "FHD",
-            main_camera: "60MP",
-            front_camera: "50pxl",
-            battery: "4,000 mAh ",
+            main_camera: "60mpx",
+            front_camera: "50mpx",
+            battery: "4,000 mAh",
           },
         },
         {
@@ -334,7 +334,7 @@ module.exports = {
           price: 785900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680133661/EcoShop/HUAWEI_Y9A_128GB_Rosado_-_Sakura_Pink_mo5qem.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138104/EcoShop/celulares/HUAWEI_Y9A_128GB_Rosado_-_Sakura_Pink_pc00yk.jpg",
           Reviews: [
             {
               description: "celular10",
@@ -348,15 +348,15 @@ module.exports = {
             },
           ],
           ProductCel: {
-            operating_system: "Android ",
+            operating_system: "android",
             storage: "128gb",
             ram: "8gb",
             processor: "Kirin",
             screen_size: "6.75  Pulgadas",
-            resolution: "LCD",
-            main_camera: "48MP",
-            front_camera: "8pxl",
-            battery: "6,000 mAh ",
+            resolution: "FHD",
+            main_camera: "48mpx",
+            front_camera: "8mpx",
+            battery: "6,000 mAh",
           },
         },
 
@@ -370,7 +370,7 @@ module.exports = {
           price: 5999900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680133850/EcoShop/HUAWEI_Mate_50_Pro_256GB_hhyedt.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138108/EcoShop/celulares/HUAWEI_Mate_50_Pro_256GB_pulroe.jpg",
           Reviews: [
             {
               description: "celular11",
@@ -389,10 +389,10 @@ module.exports = {
             ram: "8gb",
             processor: "Snapdragon 8+ Gen 1 4G",
             screen_size: "OLED 6,74 pulgadas",
-            resolution: "2.616 × 1.212 píxeles",
-            main_camera: "50MP",
-            front_camera: "13pxl",
-            battery: "4,700 mAh ",
+            resolution: "2616 × 1212",
+            main_camera: "50mpx",
+            front_camera: "13mpx",
+            battery: "4,700 mAh",
           },
         },
 
@@ -406,7 +406,7 @@ module.exports = {
           price: 873924,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680134720/EcoShop/OPPO_A57_128GB_Negro_c3ixy5.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138132/EcoShop/celulares/OPPO_A57_128GB_Negro_j5jqd6.jpg",
           Reviews: [
             {
               description: "celular12",
@@ -425,24 +425,24 @@ module.exports = {
             ram: "4gb",
             processor: "MediaTek Helio G35",
             screen_size: "6.75  Pulgadas",
-            resolution: "1612 x 720 (HD+)",
-            main_camera: "13MP",
-            front_camera: "8pxl",
-            battery: "6,000 mAh ",
+            resolution: "1612 x 720",
+            main_camera: "13mpx",
+            front_camera: "8mpx",
+            battery: "6,000 mAh",
           },
         },
 
         {
           category: "celulares",
           brand: "oppo",
-          name: "OPPO Reno 7 Azul ",
+          name: "OPPO Reno 7 Azul",
           description:
             "El Oppo Reno 7 con su cámara microscópica con Orbit light es capaz de capturar hasta el más pequeño detalle del mundo, además de su exclusiva colaboración SONY-OPPO integrando el primer Ultra sensor IMX709 en cámara frontal, asegurando fotos y videos increíbles incluso en condiciones de poca luz. Su tecnología de diseño OPPO GLOW, evita la marcación de huellas dactilares y disminuye daños por rayones o arañazos. Brinda super carga rápida SUPERVOOC de 33W y 5 capas de seguridad de carga. Alto rendimiento y funciones exclusivas para el usuario. ¡Lleva el tuyo ahora!",
           stock: 15,
           price: 1999900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680134890/EcoShop/OPPO_Reno_7_Azul_hr703l.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138132/EcoShop/celulares/OPPO_Reno_7_Azul_bssi1y.jpg",
           Reviews: [
             {
               description: "celular13",
@@ -457,14 +457,14 @@ module.exports = {
           ],
           ProductCel: {
             operating_system: "ColorOS 13",
-            storage: "128/256gb",
-            ram: "6/8gb",
+            storage: "256gb",
+            ram: "8gb",
             processor: "Snapdragon™ 680",
             screen_size: "6.75  Pulgadas",
             resolution: "2400 x 1080",
-            main_camera: "64MP",
-            front_camera: "32pxl",
-            battery: "6,000 mAh ",
+            main_camera: "64mpx",
+            front_camera: "32mpx",
+            battery: "6,000 mAh",
           },
         },
 
@@ -478,7 +478,7 @@ module.exports = {
           price: 374900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680135371/EcoShop/KALLEY_Silver_Max_Pro_32GB_Verde_xqdc1s.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138123/EcoShop/celulares/KALLEY_Silver_Max_Pro_32GB_Verde_p2gadg.jpg",
           Reviews: [
             {
               description: "celular14",
@@ -492,15 +492,15 @@ module.exports = {
             },
           ],
           ProductCel: {
-            operating_system: "Android ",
+            operating_system: "android",
             storage: "32gb",
             ram: "3gb",
             processor: "Mediatek A25 Octa-Core",
-            screen_size: "6.5”HD+ IPS",
-            resolution: "720X1600 ",
-            main_camera: "13MP",
-            front_camera: "8pxl",
-            battery: "5,000 mAh ",
+            screen_size: "6.5 HD",
+            resolution: "720 x 1600",
+            main_camera: "13mpx",
+            front_camera: "8mpx",
+            battery: "5,000 mAh",
           },
         },
 
@@ -514,7 +514,7 @@ module.exports = {
           price: 499900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680135492/EcoShop/MOTOROLA_E22I_64GB_Blanco_rvoyot.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138122/EcoShop/celulares/MOTOROLA_E22I_64GB_Blanco_tattcz.jpg",
           Reviews: [
             {
               description: "celular15",
@@ -528,15 +528,15 @@ module.exports = {
             },
           ],
           ProductCel: {
-            operating_system: "Android ",
+            operating_system: "android",
             storage: "128gb",
             ram: "8gb",
             processor: "Mediatek 12 GO",
-            screen_size: "6.5  Pulgadas",
+            screen_size: "6.5 Pulgadas",
             resolution: "720 x 1600",
-            main_camera: "16MP",
-            front_camera: "5pxl",
-            battery: "4,000 mAh ",
+            main_camera: "16mpx",
+            front_camera: "5mpx",
+            battery: "4,000 mAh",
           },
         },
 
@@ -550,7 +550,7 @@ module.exports = {
           price: 932.900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680135622/EcoShop/TECNO_POVA_4_8_256GB_Azul_djnyi5.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138140/EcoShop/celulares/TECNO_POVA_4_8_256GB_Azul_u1brvf.jpg",
           Reviews: [
             {
               description: "celular16",
@@ -564,15 +564,15 @@ module.exports = {
             },
           ],
           ProductCel: {
-            operating_system: "Android ",
+            operating_system: "android",
             storage: "128gb",
             ram: "8gb",
             processor: "Spreadtrum",
             screen_size: "65.6  Pulgadas",
             resolution: "HD",
-            main_camera: "16MP",
-            front_camera: "8pxl",
-            battery: "5,000 mAh ",
+            main_camera: "16mpx",
+            front_camera: "8mpx",
+            battery: "5,000 mAh",
           },
         },
 
@@ -586,7 +586,7 @@ module.exports = {
           price: 4209000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680135792/EcoShop/iPhone_13_128GB_Azul_Medianoche_jwsfmo.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138113/EcoShop/celulares/iPhone_13_128GB_Azul_Medianoche_ae75m4.jpg",
           Reviews: [
             {
               description: "celular17",
@@ -606,9 +606,9 @@ module.exports = {
             processor: "iOs 15",
             screen_size: "6.1  Pulgadas",
             resolution: "2532 x 1170",
-            main_camera: "12MP",
-            front_camera: "12pxl",
-            battery: "6,000 mAh ",
+            main_camera: "12mpx",
+            front_camera: "12mpx",
+            battery: "6,000 mAh",
           },
         },
 
@@ -622,7 +622,7 @@ module.exports = {
           price: 259900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680136018/EcoShop/ZTE_BLADE_L210_-_32GB_Azul_aeahjw.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138147/EcoShop/celulares/ZTE_BLADE_L210_-_32GB_Azul_sbi5oo.jpg",
           Reviews: [
             {
               description: "celular18",
@@ -641,10 +641,10 @@ module.exports = {
             ram: "2gb",
             processor: "Unisoc 11Go",
             screen_size: "6.52  Pulgadas",
-            resolution: "720*1600",
-            main_camera: "13MP",
-            front_camera: "5pxl",
-            battery: "5,000 mAh ",
+            resolution: "720 x 1600",
+            main_camera: "13mpx",
+            front_camera: "5mpx",
+            battery: "5,000 mAh",
           },
         },
 
@@ -658,7 +658,7 @@ module.exports = {
           price: 479.900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680136257/EcoShop/ZTE_BLADE_A52_64GB_DS_Azul_rd2hn2.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138146/EcoShop/celulares/ZTE_BLADE_A52_64GB_DS_Azul_nwstfw.jpg",
           Reviews: [
             {
               description: "celular19",
@@ -672,15 +672,15 @@ module.exports = {
             },
           ],
           ProductCel: {
-            operating_system: "Android ",
+            operating_system: "android",
             storage: "64gb",
             ram: "2gb",
             processor: "KUnisoc 11go",
             screen_size: "6.52  Pulgadas",
-            resolution: "720*1600",
-            main_camera: "13MP",
-            front_camera: "5pxl",
-            battery: "5,000 mAh ",
+            resolution: "720 x 1600",
+            main_camera: "13mpx",
+            front_camera: "5mpx",
+            battery: "5,000 mAh",
           },
         },
 
@@ -694,7 +694,7 @@ module.exports = {
           price: 699.900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680136556/EcoShop/REALME_C33_128GB_Azul_avhbwe.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680138138/EcoShop/celulares/REALME_C33_128GB_Azul_miqopw.jpg",
           Reviews: [
             {
               description: "celular20",
@@ -708,15 +708,15 @@ module.exports = {
             },
           ],
           ProductCel: {
-            operating_system: "Android ",
+            operating_system: "android",
             storage: "128gb",
             ram: "4gb",
             processor: "Unisoc 12",
             screen_size: "6.5  Pulgadas",
-            resolution: "HD+",
-            main_camera: "50MP",
-            front_camera: "5pxl",
-            battery: "5,000 mAh ",
+            resolution: "HD",
+            main_camera: "50mpx",
+            front_camera: "5mpx",
+            battery: "5,000 mAh",
           },
         },
       ],

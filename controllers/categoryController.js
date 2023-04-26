@@ -109,7 +109,7 @@ module.exports = {
       //     .status(400)
       //     .json({ message: "No se puede actualizar el campo de estado" });
       // }
-      await category.update({ name, description, status }, { where: { id } });
+      await category.update({ ...req.body }, { where: { id } });
 
       const updatedCategory = await models.Category.findOne({ where: { id } });
 

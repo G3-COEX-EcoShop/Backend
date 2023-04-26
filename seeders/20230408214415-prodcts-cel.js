@@ -401,7 +401,7 @@ module.exports = {
           brand: "oppo",
           name: "OPPO A57 128GB Negro",
           description:
-            "",
+            "El Oppo A57 negro cuenta con un diseño innovador y cuerpo curvo 2D permitiendo un mejor agarre, carga rápida de 33W SUPERVOOC, disfruta del uso de aplicaciones sin contratiempos, además cuenta con altavoces duales para un sonido de mayor potencia. Su sistema ColorOS, cuenta con funciones exclusivas para el usuario y mayor seguridad garantizando la protección de datos almacenados en el smartphone. ¡Lleva el tuyo ahora!",
           stock: 3,
           price: 873924,
           status: 1,
@@ -547,7 +547,7 @@ module.exports = {
           description:
             "TECNO POVA 4 y Su batería gran de 6000 mAh es imbatible en el mercado y prueba de ello es que cuenta con una duración máxima de 12,5 horas jugando videojuegos como MOBILE LEGENDS, carga rápida de 18 Watts, hasta 28,75 horas usando constantemente GOOGLE MAPS, 61.96 horas en llamadas 4G, lo hace el smartphone indispensable para grandes consumidores de juegos y contenido en la red. Esto sumado a su diseño innovador, pantalla de 6,9 (refresco de 90 Hz) pulgadas y chip de alta velocidad, lo hacen el equipo para juegos y comunidad por excelencia.",
           stock: 12,
-          price: 932.900,
+          price: 932.9,
           status: 1,
           img_url:
             "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680135622/EcoShop/TECNO_POVA_4_8_256GB_Azul_djnyi5.jpg",
@@ -655,7 +655,7 @@ module.exports = {
           description:
             "Experimenta lo mejor del entretenimiento en un solo equipo!!",
           stock: 9,
-          price: 479.900,
+          price: 479.9,
           status: 1,
           img_url:
             "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680136257/EcoShop/ZTE_BLADE_A52_64GB_DS_Azul_rd2hn2.jpg",
@@ -691,7 +691,7 @@ module.exports = {
           description:
             "Disfruta del realme C33 Azul, el producto más elegante del nivel entrada. Junto con un excelente diseño ultra delgado podrás aprovechar de una gran pantalla de 6,5 pulgadas y unas cámaras de 50 Mpx + 8 Mpx harán que tomes fotografías de otro nivel, con calidad impresionante. Cuenta con una batería de 5000 mAh que permite tener un tiempo de uso sin estar recargando constantemente. ¡Atrévete al salto y lleva el tuyo ahora!",
           stock: 5,
-          price: 699.900,
+          price: 699.9,
           status: 1,
           img_url:
             "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680136556/EcoShop/REALME_C33_128GB_Azul_avhbwe.jpg",

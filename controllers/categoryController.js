@@ -173,13 +173,32 @@ module.exports = {
   remove: async (req, res, next) => {
     const { id } = req.query;
     try {
+      // Buscar productos asociados a la categoría
+      const products = await models.Product.findAll({
+        where: { category: id },
+      });
+  
+      // Filtrar los productos con una categoría válida
+      const productsWithCategory = products.filter(
+        (product) => product.category !== null
+      );
+  
+      // Actualizar la categoría de los productos a null
+      await Promise.all(
+        productsWithCategory.map((product) => {
+          product.category = null;
+          return product.save();
+        })
+      );
+  
+      // Eliminar la categoría
       const category = await models.Category.destroy({
         where: { id },
       });
       if (category === 0) {
-        throw new Error("No se pudo eliminar la categoria");
+        throw new Error("No se pudo eliminar la categoría");
       }
-      res.json({ mensaje: "categoria eliminado exitosamente" });
+      res.json({ mensaje: "Categoría eliminada exitosamente" });
     } catch (e) {
       res.status(500).send({
         message: "Error -> " + e,
@@ -187,4 +206,5 @@ module.exports = {
       next(e);
     }
   },
+  
 };

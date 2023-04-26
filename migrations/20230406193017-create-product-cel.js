@@ -15,7 +15,9 @@ module.exports = {
         references: {
           model: "Products",
           key: "id",
-          onDelete: "CASCADE",
+          onUpdate: 'CASCADE',
+
+
         },
       },
       operating_system: {

@@ -15,7 +15,7 @@ module.exports = {
           price: 2049900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680836148/Portatiles/Computador_Port%C3%A1til_HP_Pavilion_15_lnwq5t.webp",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841128/EcoShop/PC%20Y%20PORTATILES/Computador_Port%C3%A1til_HP_Pavilion_15_wbsgyj.webp",
           Reviews: [
             {
               description: "pc1",
@@ -49,7 +49,7 @@ module.exports = {
           price: 1459099,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680835692/Portatiles/Computador_Port%C3%A1til_ASUS_14_Pulgadas_X415JA_vsq5em.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841127/EcoShop/PC%20Y%20PORTATILES/Computador_Port%C3%A1til_ASUS_14_Pulgadas_X415JA_j8z12p.jpg",
           Reviews: [
             {
               description: "pc2",
@@ -84,7 +84,7 @@ module.exports = {
           price: 1750000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680836068/Portatiles/Computador_Port%C3%A1til_HP_14_Pulgadas_dq2510la_jujktn.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841127/EcoShop/PC%20Y%20PORTATILES/Computador_Port%C3%A1til_HP_14_Pulgadas_dq2510la_cboncp.jpg",
           Reviews: [
             {
               description: "pc3",
@@ -118,7 +118,7 @@ module.exports = {
           price: 3699000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680835764/Portatiles/Computador_Port%C3%A1til_Gamer_ACER_15.6_Pulgadas_504Y_cdfld8.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841127/EcoShop/PC%20Y%20PORTATILES/Computador_Port%C3%A1til_Gamer_ACER_15.6_Pulgadas_504Y_ioglsk.jpg",
           Reviews: [
             {
               description: "pc4",
@@ -152,7 +152,7 @@ module.exports = {
           price: 8199900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680835860/Portatiles/Computador_Port%C3%A1til_Gamer_LENOVO_15.6_Pulgadas_Legi%C3%B3n_5_fn9qhh.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841127/EcoShop/PC%20Y%20PORTATILES/Computador_Port%C3%A1til_Gamer_LENOVO_15.6_Pulgadas_Legi%C3%B3n_5_dhrr97.jpg",
           Reviews: [
             {
               description: "pc5",
@@ -186,7 +186,7 @@ module.exports = {
           price: 6759000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680835764/Portatiles/Computador_Port%C3%A1til_Gamer_ACER_15.6_Pulgadas_504Y_cdfld8.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841127/EcoShop/PC%20Y%20PORTATILES/Computador_Port%C3%A1til_Gamer_LENOVO_15.6_Pulgadas_IdeaPad_Gaming_3_s3jn7w.jpg",
           Reviews: [
             {
               description: "pc6",
@@ -220,7 +220,7 @@ module.exports = {
           price: 7399000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680836353/Portatiles/Computador_Port%C3%A1til_VICTUS_Gamer_HP_16.1_Pulgadas_d0510la_ysvlrd.jp",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841128/EcoShop/PC%20Y%20PORTATILES/Computador_Port%C3%A1til_VICTUS_Gamer_HP_16.1_Pulgadas_d0510la_zfdugd.jpg",
           Reviews: [
             {
               description: "pc7",
@@ -255,7 +255,7 @@ module.exports = {
           price: 7600900,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680835948/Portatiles/Computador_Port%C3%A1til_Gamer_ROG_Strix_Scar_SE_17.3_Pulgadas_G733CX_hga9sq.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841127/EcoShop/PC%20Y%20PORTATILES/Computador_Port%C3%A1til_Gamer_ROG_Strix_Scar_SE_17.3_Pulgadas_G733CX_hbz6kq.jpg",
           Reviews: [
             {
               description: "pc8",
@@ -290,7 +290,7 @@ module.exports = {
           price: 4349000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680835582/Portatiles/Computador_Escritorio_Gamer_Victus_HP_23.8_Pulgadas_TG02-0002lam_chq9qp.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841126/EcoShop/PC%20Y%20PORTATILES/Computador_Escritorio_Gamer_Victus_HP_23.8_Pulgadas_TG02-0002lam_eusygz.jpg",
           Reviews: [
             {
               description: "pc9",
@@ -325,7 +325,7 @@ module.exports = {
           price: 3479000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680834995/Portatiles/Computador_All_in_One_HP_21.5_Pulgadas_dd2020la_oxfd17.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841126/EcoShop/PC%20Y%20PORTATILES/Computador_All_in_One_HP_21.5_Pulgadas_dd2020la_alfmyx.jpg",
           Reviews: [
             {
               description: "pc10",
@@ -355,12 +355,12 @@ module.exports = {
           brand: "hp",
           name: "Computador All in One HP",
           description:
-            "Desempeño confiable y actualización sencilla. El HP All in One 22-dd2020la combina la potencia de un equipo de escritorio con la belleza de una pantalla moderna y delgada en un dispositivo confiable que está diseñado para crecer contigo. Consigue hacer más con un procesador confiable y mantén actualizado tu computador gracias a un panel posterior fácil de retirar. Podrás disfrutar de un espacio de uso despejado gracias a su diseño elegante, puertos estratégicamente situados, pantalla con microbordes y cámara emergente ¡Este es el momento de llevarlo! ¡Adquiere el tuyo aquí!",
+            "La All-in-One de HP combina la potencia de una computadora de escritorio con la belleza de una pantalla moderna. Con el procesador AMD[1], podrás disfrutar de una experiencia cinematográfica en la pantalla FHD de microbordes en tres lados[2] con altavoces duales. El diseño All-in-One incluye materiales sustentables que diseñaron a conciencia para mantener tu espacio ordenado mediante una cuidadosa ubicación de los puertos.",
           stock: 4,
           price: 1999000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680835088/Portatiles/Computador_All_in_One_HP_23.8_Pulgadas_cb0003la_e5sltz.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841126/EcoShop/PC%20Y%20PORTATILES/Computador_All_in_One_HP_23.8_Pulgadas_cb0003la_pszw3a.jpg",
           Reviews: [
             {
               description: "pc11",
@@ -395,7 +395,7 @@ module.exports = {
           price: 2898000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680835470/Portatiles/Computador_All_In_One_LENOVO_23.8_Pulgadas_A340_g2rkjj.webp",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841126/EcoShop/PC%20Y%20PORTATILES/Computador_All_In_One_LENOVO_23.8_Pulgadas_A340_akh7jx.webp",
           Reviews: [
             {
               description: "pc12",
@@ -430,7 +430,7 @@ module.exports = {
           price: 4359000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680835135/Portatiles/Computador_All_In_One_LENOVO_21_5_Pulgadas_AIO_3_izlhzz.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841126/EcoShop/PC%20Y%20PORTATILES/Computador_All_In_One_LENOVO_21_5_Pulgadas_AIO_3_finsmn.jpg",
           Reviews: [
             {
               description: "pc13",
@@ -465,7 +465,7 @@ module.exports = {
           price: 3099000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680835232/Portatiles/Computador_All_In_One_LENOVO_23_8_Pulgadas_AIO_3_zgszf8.webp",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841126/EcoShop/PC%20Y%20PORTATILES/Computador_All_In_One_LENOVO_23_8_Pulgadas_AIO_3_mrxcfb.webp",
           Reviews: [
             {
               description: "pc14",
@@ -500,7 +500,7 @@ module.exports = {
           price: 2689000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680834868/Portatiles/Computador_All_in_One_ASUS_Vivo_23.8_Pulgadas_V241EAK_ubyxwz.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841126/EcoShop/PC%20Y%20PORTATILES/Computador_All_in_One_ASUS_Vivo_23.8_Pulgadas_V241EAK_fifklu.jpg",
           Reviews: [
             {
               description: "pc15",
@@ -535,7 +535,7 @@ module.exports = {
           price: 5299000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680834936/Portatiles/Computador_All_in_One_ASUS_Zen_AiO_23_8_Pulgadas_M5401WUAK_k6kvxg.webp",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841126/EcoShop/PC%20Y%20PORTATILES/Computador_All_in_One_ASUS_Zen_AiO_23_8_Pulgadas_M5401WUAK_ul8yki.webp",
           Reviews: [
             {
               description: "pc16",
@@ -570,7 +570,7 @@ module.exports = {
           price: 5099000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680835294/Portatiles/Computador_All_In_One_LENOVO_23_8_Pulgadas_AIO_5_kxgpk1.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841126/EcoShop/PC%20Y%20PORTATILES/Computador_All_In_One_LENOVO_23_8_Pulgadas_AIO_5_lhpbir.jpg",
           Reviews: [
             {
               description: "pc17",
@@ -605,7 +605,7 @@ module.exports = {
           price: 7999000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680835527/Portatiles/Computador_All_in_One_Pavilion_HP_31.5_Pulgadas_b0001la_hmyrgt.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841127/EcoShop/PC%20Y%20PORTATILES/Computador_All_in_One_Pavilion_HP_31.5_Pulgadas_b0001la_kqkyke.jpg",
           Reviews: [
             {
               description: "pc18",
@@ -640,7 +640,7 @@ module.exports = {
           price: 6399000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680835416/Portatiles/Computador_All_In_One_LENOVO_23_8_Pulgadas_AIO_5_kxe4i8.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841126/EcoShop/PC%20Y%20PORTATILES/Computador_All_In_One_LENOVO_23_8_Pulgadas_AIO_5_r9zidp.jpg",
           Reviews: [
             {
               description: "pc19",
@@ -675,7 +675,7 @@ module.exports = {
           price: 1299000,
           status: 1,
           img_url:
-            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680836202/Portatiles/Computador_Port%C3%A1til_LENOVO_14_Pulgadas_IdeaPad_3_itiwb3.jpg",
+            "https://res.cloudinary.com/dlrdlubmf/image/upload/v1680841128/EcoShop/PC%20Y%20PORTATILES/Computador_Port%C3%A1til_LENOVO_14_Pulgadas_IdeaPad_3_okwv1i.jpg",
           Reviews: [
             {
               description: "pc20",

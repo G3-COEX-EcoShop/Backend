@@ -302,6 +302,7 @@ module.exports = {
         where: {
           category: id,
         },
+        include: [models.ProductCel, models.ProductLaptop, models.ProductTV],
       });
       res.status(200).json(products);
     } catch (e) {

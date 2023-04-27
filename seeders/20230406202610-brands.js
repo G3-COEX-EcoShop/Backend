@@ -129,10 +129,10 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        id: "Hyundai",
-        name: "Hyundai",
+        id: "hyundai",
+        name: "hyundai",
         description:
-          "Hyundai es una marca que se dedica a la fabricación de televisores y otros productos electrónicos. La empresa ofrece una amplia gama de televisores de alta definición, incluyendo modelos LED, LCD y OLED, que van desde tamaños pequeños hasta tamaños de pantalla grande. Hyundai se enfoca en ofrecer televisores con una calidad de imagen superior y una gran variedad de características y funciones, como conectividad a internet, capacidad de pantalla dividida, calidad de sonido mejorada y diseño elegante. La marca también se ha comprometido con la sostenibilidad y ha implementado prácticas empresariales responsables en la gestión de sus operaciones y la fabricación de sus productos. En resumen, Hyundai es una marca que ofrece televisores de alta calidad con una gran variedad de características y funciones a precios competitivos, con un enfoque en la calidad, la innovación y la sostenibilidad.",
+          "hyundai es una marca que se dedica a la fabricación de televisores y otros productos electrónicos. La empresa ofrece una amplia gama de televisores de alta definición, incluyendo modelos LED, LCD y OLED, que van desde tamaños pequeños hasta tamaños de pantalla grande. hyundai se enfoca en ofrecer televisores con una calidad de imagen superior y una gran variedad de características y funciones, como conectividad a internet, capacidad de pantalla dividida, calidad de sonido mejorada y diseño elegante. La marca también se ha comprometido con la sostenibilidad y ha implementado prácticas empresariales responsables en la gestión de sus operaciones y la fabricación de sus productos. En resumen, hyundai es una marca que ofrece televisores de alta calidad con una gran variedad de características y funciones a precios competitivos, con un enfoque en la calidad, la innovación y la sostenibilidad.",
         img_url:
           "https://res.cloudinary.com/dlrdlubmf/image/upload/v1681968666/EcoShop/LogotipoTV/hyundai_mr0tn8.png",
         status: true,

@@ -305,42 +305,81 @@ module.exports = {
   },
   update: async (req, res, next) => {
     try {
-      const { id } = req.query;
-      const { name, description, stock, price, status } = req.body;
+        const { id } = req.query;
+        const { category, ...fieldsToUpdate } = req.body;
 
-      const product = await models.Product.findOne({ where: { id } });
+        const product = await models.Product.findOne({ where: { id } });
 
-      if (!product) {
-        return res.status(404).json({ message: "producto no encontrado" });
-      }
+        if (!product) {
+            return res.status(404).json({ message: "Producto no encontrado" });
+        }
 
-      const allowedFields = ['name', 'description', 'stock', 'price', 'status'];
-      const fieldsToUpdate = Object.keys(req.body);
-      const invalidFields = fieldsToUpdate.filter(field => !allowedFields.includes(field));
-      if (invalidFields.length > 0) {
-        return res.status(400).json({ message: `No se pueden actualizar los campos ${invalidFields.join(', ')}` });
-      }
+        if (category !== undefined && category !== product.category) {
+            return res
+                .status(400)
+                .json({ message: "No se puede actualizar la categoría del producto" });
+        }
 
-      if (status !== undefined && status !== product.status) {
-        return res
-          .status(400)
-          .json({ message: "No se puede actualizar el campo de estado" });
-      }
-      await product.update(
-        { name, description, stock, price, status },
-        { where: { id } }
-      );
+        let productModel;
+        if (product.category === "celulares") {
+            productModel = models.ProductCel;
+        } else if (product.category === "televisores") {
+            productModel = models.ProductTV;
+        } else if (product.category === "computadores") {
+            productModel = models.ProductLaptop;
+        } else {
+            return res.status(400).json({
+                message: "Categoría inválida",
+            });
+        }
 
-      const updatedProduct = await models.Product.findOne({ where: { id } });
+        const allowedFields = [
+            "name",
+            "description",
+            "stock",
+            "price",
+            "status",
+            // Agregar los campos específicos de cada modelo de producto
+            // y cambiar los nombres para que sean únicos
+            "operating_system",
+            "storage",
+            "ram",
+            "processor",
+            "screen_size",
+            "resolution",
+            "main_camera",
+            "front_camera",
+            "battery",
+            "display_technology",
+            "hdmi",
+            "cpu_brand",
+            "cpu_model",
+            "graphics_coprocessor",
+        ];
 
-      return res.status(200).json(updatedProduct);
+        const invalidFields = Object.keys(fieldsToUpdate).filter(
+            (field) => !allowedFields.includes(field)
+        );
+        if (invalidFields.length > 0) {
+            return res
+                .status(400)
+                .json({ message: `No se pueden actualizar los campos ${invalidFields.join(", ")}` });
+        }
+
+        // Actualizar el producto en la tabla products y el modelo correspondiente
+        await models.Product.update(fieldsToUpdate, { where: { id } });
+        await productModel.update(fieldsToUpdate, { where: { id_product: id } });
+
+        const updatedProduct = await models.Product.findOne({ where: { id } });
+
+        return res.status(200).json(updatedProduct);
     } catch (e) {
-      res.status(500).send({
-        message: "Error -> " + e,
-      });
-      next(e);
+        res.status(500).send({
+            message: "Error -> " + e,
+        });
+        next(e);
     }
-  },
+},
 
   remove: async (req, res, next) => {
     const { id } = req.query;
